@@ -1,0 +1,7 @@
+# name: aws_cloudformation_stack (InSpec)
+# key: aws_cloudformation_stack
+# --
+# https://docs.chef.io/inspec/resources/aws_cloudformation_stack
+	describe aws_cloudformation_stack('stack-name') do
+				it { should exist }
+			end

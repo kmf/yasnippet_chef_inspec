@@ -1,0 +1,7 @@
+# name: apache (InSpec)
+# key: apache
+# --
+# https://docs.chef.io/inspec/resources/apache
+	describe apache do
+				its('setting_name') { should cmp 'value' }
+			end

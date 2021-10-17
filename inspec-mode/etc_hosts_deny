@@ -1,0 +1,8 @@
+# name: etc_hosts_deny (InSpec)
+# key: etc_hosts_deny
+# --
+# https://docs.chef.io/inspec/resources/etc_hosts_deny
+	describe etc_hosts_deny.where { daemon == 'value' } do
+				its ('client_list') { should include ['values'] }
+				its ('options') { should include ['values'] }
+			end

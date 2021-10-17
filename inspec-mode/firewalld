@@ -1,0 +1,10 @@
+# name: firewalld (InSpec)
+# key: firewalld
+# --
+# https://docs.chef.io/inspec/resources/firewalld
+	describe firewalld do
+				it { should be_running }
+				its('default_zone') { should eq 'public' }
+				it { should have_service_enabled_in_zone('ssh', 'public') }
+				it { should have_rule_enabled('family=ipv4 source address=192.168.0.14 accept', 'public') }
+			end

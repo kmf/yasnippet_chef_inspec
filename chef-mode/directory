@@ -1,0 +1,14 @@
+# name: directory (Chef)
+# key: directory
+# --
+# https://docs.chef.io/resources/directory
+directory '${1:name}' do
+	group								 
+	inherits									
+	mode								 
+	owner								 
+	path								 
+	recursive									
+	rights										
+	action :${2:create}					
+end

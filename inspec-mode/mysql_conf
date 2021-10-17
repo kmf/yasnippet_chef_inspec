@@ -1,0 +1,7 @@
+# name: mysql_conf (InSpec)
+# key: mysql_conf
+# --
+# https://docs.chef.io/inspec/resources/mysql_conf
+	describe mysql_conf('path') do
+				its('setting') { should eq 'value' }
+			end

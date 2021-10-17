@@ -1,0 +1,7 @@
+# name: azurerm_virtual_machine_disk (InSpec)
+# key: azurerm_virtual_machine_disk
+# --
+# https://docs.chef.io/inspec/resources/azurerm_virtual_machine_disk
+	describe azurerm_virtual_machine_disk(resource_group: 'MyResourceGroup', name: 'MyDiskName') do
+				...
+			end

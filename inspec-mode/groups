@@ -1,0 +1,8 @@
+# name: groups (InSpec)
+# key: groups
+# --
+# https://docs.chef.io/inspec/resources/groups
+	describe groups do
+				its('names') { should eq ['wheel', 'daemon', 'sys', 'adm'] }
+				its('names') { should include 'wheel' }
+			end

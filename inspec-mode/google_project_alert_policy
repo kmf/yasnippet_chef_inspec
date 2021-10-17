@@ -1,0 +1,12 @@
+# name: google_project_alert_policy (InSpec)
+# key: google_project_alert_policy
+# --
+# https://docs.chef.io/inspec/resources/google_project_alert_policy
+	describe.one do
+		google_project_alert_policies(project: 'chef-gcp-inspec').policy_names do |policy_name|
+			describe google_project_alert_policy(project: 'chef-gcp-inspec', name: policy_name) do
+				it { should exist }
+				its('display_name') { should cmp 'Display'}
+				its('combiner') { should cmp 'OR'}
+				it { should be_enabled }
+			end

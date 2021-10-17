@@ -1,0 +1,7 @@
+# name: aws_iam_account_alias (InSpec)
+# key: aws_iam_account_alias
+# --
+# https://docs.chef.io/inspec/resources/aws_iam_account_alias
+	describe aws_iam_account_alias do
+				it { should exist }
+			end

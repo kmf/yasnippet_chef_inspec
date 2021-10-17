@@ -1,0 +1,12 @@
+# name: google_compute_region_instance_group_manager (InSpec)
+# key: google_compute_region_instance_group_manager
+# --
+# https://docs.chef.io/inspec/resources/google_compute_region_instance_group_manager
+	describe google_compute_region_instance_group_manager(project: 'chef-gcp-inspec', region: 'europe-west2', name: 'inspec-rigm') do
+		it { should exist }
+		its('base_instance_name') { should eq 'rigm1' }
+		its('target_size') { should eq '1' }
+		its('named_ports.first.name') { should eq 'https' }
+		its('named_ports.first.port') { should eq '8888' }
+		its('auto_healing_policies.first.initial_delay_sec') { should eq '300' }
+	end

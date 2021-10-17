@@ -1,0 +1,20 @@
+# name: chef_client_launchd (Chef)
+# key: chef_client_launchd
+# --
+# https://docs.chef.io/resources/chef_client_launchd
+chef_client_launchd '${1:name}' do
+	accept_chef_license	 ${2:false}		 
+	chef_binary_path "${3:/opt/chef/bin/chef-client}"	 
+	config_directory "${4:/etc/chef}"	 
+	daemon_options		 
+	environment				 
+	interval					 
+	log_directory "${5:/Library/Logs/Chef}"			 
+	log_file_name "${6:client.log}"			 
+	low_priority_io		${7:true} 
+	nice										
+	splay										
+	user "${8:root}"							 
+	working_directory "${9:/var/root}"	 
+	action :${10:enable}						 
+end

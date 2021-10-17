@@ -1,0 +1,7 @@
+# name: zfs_pool (InSpec)
+# key: zfs_pool
+# --
+# https://docs.chef.io/inspec/resources/zfs_pool
+	describe zfs_pool('pool') do
+				it { should MATCHER 'value' }
+			end

@@ -1,0 +1,7 @@
+# name: inetd_conf (InSpec)
+# key: inetd_conf
+# --
+# https://docs.chef.io/inspec/resources/inetd_conf
+	describe inetd_conf('path') do
+				its('service_name') { should eq 'value' }
+			end

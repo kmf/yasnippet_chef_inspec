@@ -1,0 +1,7 @@
+# name: windows_firewall (InSpec)
+# key: windows_firewall
+# --
+# https://docs.chef.io/inspec/resources/windows_firewall
+	describe windows_firewall('name') do
+				it { should be_enabled }
+			end

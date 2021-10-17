@@ -1,0 +1,7 @@
+# name: azurerm_resource_groups (InSpec)
+# key: azurerm_resource_groups
+# --
+# https://docs.chef.io/inspec/resources/azurerm_resource_groups
+	describe azurerm_resource_groups do
+				...
+			end

@@ -1,0 +1,9 @@
+# name: ruby_block (Chef)
+# key: ruby_block
+# --
+# https://docs.chef.io/resources/ruby_block
+ruby_block '${1:name}' do
+	block											
+	block_name					 
+	action :${2:run}					
+end

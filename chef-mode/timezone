@@ -1,0 +1,8 @@
+# name: timezone (Chef)
+# key: timezone
+# --
+# https://docs.chef.io/resources/timezone
+timezone '${1:name}' do
+	timezone			
+	action :${2:set}				
+end

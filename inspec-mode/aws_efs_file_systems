@@ -1,0 +1,7 @@
+# name: aws_efs_file_systems (InSpec)
+# key: aws_efs_file_systems
+# --
+# https://docs.chef.io/inspec/resources/aws_efs_file_systems
+	describe aws_efs_file_systems
+				it { should exist }
+			end

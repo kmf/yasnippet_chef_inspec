@@ -1,0 +1,60 @@
+# name: launchd (Chef)
+# key: launchd
+# --
+# https://docs.chef.io/resources/launchd
+launchd '${1:name}' do
+	abandon_process_group	${2:false}		
+	backup													
+	cookbook											
+	debug					${3:false}				
+	disabled				${4:false}			
+	enable_globbing									
+	enable_transactions							
+	environment_variables						
+	exit_timeout										
+	group													
+	hard_resource_limits						
+	inetd_compatibility							
+	init_groups											
+	keep_alive											
+	label														
+	launch_events										
+	launch_only_once								
+	ld_group											
+	limit_load_from_hosts						
+	limit_load_to_hosts							
+	limit_load_to_session_type			
+	low_priority_io									
+	mach_services										
+	mode													
+	nice														
+	on_demand												
+	owner													
+	path													
+	plist_hash										
+	process_type									
+	program												
+	program_arguments							
+	queue_directories							
+	root_directory								
+	run_at_load										
+	session_type									
+	sockets												
+	soft_resource_limits					
+	source												
+	standard_error_path						
+	standard_in_path							
+	standard_out_path							
+	start_calendar_interval				
+	start_interval								
+	start_on_mount								
+	throttle_interval							
+	time_out											
+	type "${5:daemon}"														
+	umask													
+	username											
+	wait_for_debugger							
+	watch_paths										
+	working_directory							
+	action :${6:create}						
+end

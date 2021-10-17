@@ -1,0 +1,11 @@
+# name: iis_site (InSpec)
+# key: iis_site
+# --
+# https://docs.chef.io/inspec/resources/iis_site
+	describe iis_site('site_name') do
+				it { should exist }
+				it { should be_running }
+				it { should have_app_pool('app_pool_name') }
+				it { should have_binding('binding_details') }
+				it { should have_path('path_to_site') }
+			end

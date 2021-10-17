@@ -1,0 +1,10 @@
+# name: osx_profile (Chef)
+# key: osx_profile
+# --
+# https://docs.chef.io/resources/osx_profile
+osx_profile '${1:name}' do
+	identifier			
+	profile					
+	profile_name			
+	action :${2:install}	
+end

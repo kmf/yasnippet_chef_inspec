@@ -1,0 +1,15 @@
+# name: apt_package (Chef)
+# key: apt_package
+# --
+# https://docs.chef.io/resources/apt_package
+apt_package '${1:name}' do
+	default_release				 
+	options								 
+	overwrite_config_files	${2:false} 
+	package_name					 
+	response_file					 
+	response_file_variables 
+	timeout								 
+	version								 
+	action :${3:install}	 
+end

@@ -1,0 +1,8 @@
+# name: homebrew_update (Chef)
+# key: homebrew_update
+# --
+# https://docs.chef.io/resources/homebrew_update
+homebrew_update '${1:name}' do
+	frequency	86400		
+	action :${2:periodic}	  
+end

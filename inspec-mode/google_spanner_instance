@@ -1,0 +1,12 @@
+# name: google_spanner_instance (InSpec)
+# key: google_spanner_instance
+# --
+# https://docs.chef.io/inspec/resources/google_spanner_instance
+	describe google_spanner_instance(project: 'chef-gcp-inspec', name: 'spinstance', config: 'regional-us-east1') do
+		it { should exist }
+		its('config') { should match 'regional-us-east1' }
+		its('name') { should match 'spinstance' }
+		its('display_name') { should eq 'inspectest' }
+		its('node_count') { should eq '1' }
+		its('labels') { should include('env' => 'test') }
+	end

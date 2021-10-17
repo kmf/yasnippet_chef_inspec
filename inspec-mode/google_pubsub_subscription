@@ -1,0 +1,7 @@
+# name: google_pubsub_subscription (InSpec)
+# key: google_pubsub_subscription
+# --
+# https://docs.chef.io/inspec/resources/google_pubsub_subscription
+	describe google_pubsub_subscription(project: 'chef-gcp-inspec', name: 'inspec-gcp-subscription') do
+		it { should exist }
+	end

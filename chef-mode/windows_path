@@ -1,0 +1,8 @@
+# name: windows_path (Chef)
+# key: windows_path
+# --
+# https://docs.chef.io/resources/windows_path
+windows_path '${1:name}' do
+	path			
+	action :${2:add}		
+end

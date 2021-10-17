@@ -1,0 +1,9 @@
+# name: google_compute_https_health_checks (InSpec)
+# key: google_compute_https_health_checks
+# --
+# https://docs.chef.io/inspec/resources/google_compute_https_health_checks
+	describe google_compute_https_health_checks(project: 'chef-gcp-inspec') do
+		its('names') { should include 'inspec-gcp-https-health-check' }
+		its('timeout_secs') { should include '15' }
+		its('check_interval_secs') { should include '15' }
+	end

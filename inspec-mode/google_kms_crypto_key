@@ -1,0 +1,12 @@
+# name: google_kms_crypto_key (InSpec)
+# key: google_kms_crypto_key
+# --
+# https://docs.chef.io/inspec/resources/google_kms_crypto_key
+	describe google_kms_crypto_key(project: 'chef-gcp-inspec', location: 'europe-west2', key_ring_name: 'kms-key-ring', name: 'kms-key') do
+		it { should exist }
+		its('crypto_key_name') { should cmp 'kms-key' }
+		its('primary_state') { should eq "ENABLED" }
+		its('purpose') { should eq "ENCRYPT_DECRYPT" }
+		its('next_rotation_time') { should be > Time.now - 100000 }
+		its('create_time') { should be > Time.now - 365*60*60*24*10 }
+	end

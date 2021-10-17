@@ -1,0 +1,18 @@
+# name: rhsm_register (Chef)
+# key: rhsm_register
+# --
+# https://docs.chef.io/resources/rhsm_register
+rhsm_register '${1:name}' do
+	activation_key						
+	auto_attach	${2:false}		
+	environment					 
+	force											
+	https_for_ca_consumer ${3:false}  
+	install_katello_agent ${4:true}  
+	organization				 
+	password						 
+	satellite_host						
+	system_name					 
+	username						 
+	action :${5:register}			
+end

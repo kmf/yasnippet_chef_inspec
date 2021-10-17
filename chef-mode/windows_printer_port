@@ -1,0 +1,13 @@
+# name: windows_printer_port (Chef)
+# key: windows_printer_port
+# --
+# https://docs.chef.io/resources/windows_printer_port
+windows_printer_port '${1:name}' do
+	ipv4_address					
+	port_description		
+	port_name						
+	port_number						
+	port_protocol					
+	snmp_enabled ${2:false}		
+	action :${3:create}				
+end

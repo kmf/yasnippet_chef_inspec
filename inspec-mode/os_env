@@ -1,0 +1,7 @@
+# name: os_env (InSpec)
+# key: os_env
+# --
+# https://docs.chef.io/inspec/resources/os_env
+	describe os_env('VARIABLE') do
+				its('property') { should eq 1 }
+			end

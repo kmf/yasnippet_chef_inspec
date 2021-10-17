@@ -1,0 +1,7 @@
+# name: aws_ecs_cluster (InSpec)
+# key: aws_ecs_cluster
+# --
+# https://docs.chef.io/inspec/resources/aws_ecs_cluster
+	describe aws_ecs_cluser(cluster_name: 'cluster-8') do
+				it						 { should exist }
+			end

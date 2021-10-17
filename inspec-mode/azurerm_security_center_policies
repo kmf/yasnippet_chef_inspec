@@ -1,0 +1,7 @@
+# name: azurerm_security_center_policies (InSpec)
+# key: azurerm_security_center_policies
+# --
+# https://docs.chef.io/inspec/resources/azurerm_security_center_policies
+	describe azurerm_security_center_policies do
+				...
+			end

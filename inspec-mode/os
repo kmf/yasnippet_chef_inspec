@@ -1,0 +1,7 @@
+# name: os (InSpec)
+# key: os
+# --
+# https://docs.chef.io/inspec/resources/os
+	describe os.family do
+				it { should eq 'platform_family_name' }
+			end

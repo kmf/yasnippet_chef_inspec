@@ -1,0 +1,23 @@
+# name: execute (Chef)
+# key: execute
+# --
+# https://docs.chef.io/resources/execute
+execute '${1:name}' do
+	command "${2:ls -la}"				
+	creates		 
+	cwd				 
+	default_env	${3:false}		
+	domain		 
+	elevated	${4:false}			
+	environment 
+	group			 
+	input			 
+	live_stream	${5:false}		
+	password	 
+	returns		 
+	sensitive	 
+	timeout		 
+	umask			 
+	user			 
+	action :${6:run}	
+end

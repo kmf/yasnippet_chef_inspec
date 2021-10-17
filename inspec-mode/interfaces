@@ -1,0 +1,7 @@
+# name: interfaces (InSpec)
+# key: interfaces
+# --
+# https://docs.chef.io/inspec/resources/interfaces
+	describe interfaces do
+				its('names') { should include 'eth0' }
+			end

@@ -1,0 +1,9 @@
+# name: google_sql_user (InSpec)
+# key: google_sql_user
+# --
+# https://docs.chef.io/inspec/resources/google_sql_user
+	describe google_sql_user(project: 'chef-gcp-inspec', database: 'my-database', name: 'user-name', host: "example.com") do
+		it { should exist }
+		its('name') { should cmp 'user-name' }
+		its('instance') { should cmp 'my-database' }
+	end

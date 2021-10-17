@@ -1,0 +1,8 @@
+# name: cron_access (Chef)
+# key: cron_access
+# --
+# https://docs.chef.io/resources/cron_access
+cron_access '${1:name}' do
+	user			
+	action :${2:allow}		 
+end

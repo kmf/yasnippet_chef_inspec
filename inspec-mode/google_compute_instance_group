@@ -1,0 +1,11 @@
+# name: google_compute_instance_group (InSpec)
+# key: google_compute_instance_group
+# --
+# https://docs.chef.io/inspec/resources/google_compute_instance_group
+	describe google_compute_instance_group(project: 'chef-gcp-inspec', zone: 'zone', name: 'inspec-instance-group') do
+		it { should exist }
+		its('description') { should cmp 'My instance group for testing' }
+		its('named_ports.count') { should cmp 1 }
+		its('named_ports.first.name') { should cmp 'https' }
+		its('named_ports.first.port') { should cmp '8080' }
+	end

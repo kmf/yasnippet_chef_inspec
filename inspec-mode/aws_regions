@@ -1,0 +1,7 @@
+# name: aws_regions (InSpec)
+# key: aws_regions
+# --
+# https://docs.chef.io/inspec/resources/aws_regions
+	describe aws_regions.where { region_name: 'us-not-there-1' } do
+				it { should_not exist }
+			end

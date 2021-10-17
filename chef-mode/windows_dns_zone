@@ -1,0 +1,10 @@
+# name: windows_dns_zone (Chef)
+# key: windows_dns_zone
+# --
+# https://docs.chef.io/resources/windows_dns_zone
+windows_dns_zone '${1:name}' do
+	replication_scope "${2:Domain}" 
+	server_type "${3:Domain}"			 
+	zone_name				 
+	action :${4:create}						
+end

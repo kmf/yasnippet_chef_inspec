@@ -1,0 +1,7 @@
+# name: aws_cloudwatch_log_metric_filter (InSpec)
+# key: aws_cloudwatch_log_metric_filter
+# --
+# https://docs.chef.io/inspec/resources/aws_cloudwatch_log_metric_filter
+	describe aws_cloudwatch_log_metric_filter(filter_name: 'my-filter', log_group_name: 'my-log-group') do
+				it { should exist }
+			end

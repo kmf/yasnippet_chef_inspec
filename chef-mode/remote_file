@@ -1,0 +1,36 @@
+# name: remote_file (Chef)
+# key: remote_file
+# --
+# https://docs.chef.io/resources/remote_file
+remote_file '${1:name}' do
+	atomic_update							
+	authentication			 
+	backup										
+	checksum						 
+	content							 
+	diff								 
+	force_unlink	${2:false}		
+	ftp_active_mode	${3:false}	
+	group								 
+	headers										
+	inherits									
+	manage_symlink_source			
+	mode								 
+	notifies						 
+	owner								 
+	path								 
+	rights										
+	source							 
+	subscribes					 
+	use_conditional_get				
+	verify							 
+	remote_domain				 
+	remote_password						
+	remote_user					 
+	show_progress	${4:false}		
+	use_etag		${5:true}				
+	use_last_modified	${6:true	
+	sensitive		${7:false}			
+	verifications							
+	action :${8:create}					
+end

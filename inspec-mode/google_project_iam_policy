@@ -1,0 +1,7 @@
+# name: google_project_iam_policy (InSpec)
+# key: google_project_iam_policy
+# --
+# https://docs.chef.io/inspec/resources/google_project_iam_policy
+	describe google_project_iam_policy(project: "project") do
+		it { should exist }
+	end

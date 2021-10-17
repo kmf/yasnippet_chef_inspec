@@ -1,0 +1,7 @@
+# name: azurerm_locks (InSpec)
+# key: azurerm_locks
+# --
+# https://docs.chef.io/inspec/resources/azurerm_locks
+	describe azurerm_locks(resource_group: 'rg', resource_name: 'my-vm', resource_type: 'Microsoft.Compute/virtualMachines') do
+				...
+			end

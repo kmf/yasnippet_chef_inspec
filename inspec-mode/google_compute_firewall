@@ -1,0 +1,9 @@
+# name: google_compute_firewall (InSpec)
+# key: google_compute_firewall
+# --
+# https://docs.chef.io/inspec/resources/google_compute_firewall
+	describe google_compute_firewall(project: 'chef-gcp-inspec', name: 'inspec-gcp-firewall') do
+		its('direction') { should cmp 'INGRESS' }
+		its('log_config_enabled?') { should be true }
+		its('source_tags') { should include 'some-tag' }
+	end

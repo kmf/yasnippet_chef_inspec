@@ -1,0 +1,7 @@
+# name: azurerm_load_balancers (InSpec)
+# key: azurerm_load_balancers
+# --
+# https://docs.chef.io/inspec/resources/azurerm_load_balancers
+	describe azurerm_load_balancer do
+				...
+			end

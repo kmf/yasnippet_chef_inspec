@@ -1,0 +1,8 @@
+# name: aws_efs_file_system (InSpec)
+# key: aws_efs_file_system
+# --
+# https://docs.chef.io/inspec/resources/aws_efs_file_system
+	describe aws_efs_file_system(file_system_id: 'fs-12345678') do
+				it												 { should be_encrypted }
+				its('size_in_bytes.value') { should cmp 6144 }
+			end

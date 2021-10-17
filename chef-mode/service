@@ -1,0 +1,22 @@
+# name: service (Chef)
+# key: service
+# --
+# https://docs.chef.io/resources/service
+service '${1:name}' do
+	init_command	 
+	options				 
+	parameters		 
+	pattern				 
+	priority			 
+	reload_command 
+	restart_command 
+	run_levels		 
+	service_name	 
+	start_command	 
+	status_command 
+	stop_command	 
+	supports			 
+	timeout				 
+	user					 
+	action :${2:nothing}	
+end

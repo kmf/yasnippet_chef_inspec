@@ -1,0 +1,7 @@
+# name: google_compute_snapshots (InSpec)
+# key: google_compute_snapshots
+# --
+# https://docs.chef.io/inspec/resources/google_compute_snapshots
+	describe google_compute_snapshots(project: 'chef-gcp-inspec') do
+		its('count') { should be >= 1 }
+	end

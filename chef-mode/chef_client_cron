@@ -1,0 +1,26 @@
+# name: chef_client_cron (Chef)
+# key: chef_client_cron
+# --
+# https://docs.chef.io/resources/chef_client_cron
+chef_client_cron '${1:name}' do
+	accept_chef_license	${2:false}	 
+	append_log_file	${3:true}	 
+	chef_binary_path "${4:/opt/chef/bin/chef-client}"	 
+	comment						 
+	config_directory "${5:/etc/chef}"	 
+	daemon_options		 
+	day "${6:*}"								 
+	environment				 
+	hour "${7:*}"							 
+	job_name "${8:chef-client}"					 
+	log_directory			 
+	log_file_name "${9:client.log}"			 
+	mailto						 
+	minute "${10:0,30}"						 
+	month "${11:*}"							 
+	nice							 
+	splay ${12:300}						 
+	user "${13:root}"							 
+	weekday "${14:*}"						 
+	action :${15:add}						 
+end

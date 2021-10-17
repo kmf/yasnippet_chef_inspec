@@ -1,0 +1,8 @@
+# name: ohai (Chef)
+# key: ohai
+# --
+# https://docs.chef.io/resources/ohai
+ohai '${1:name}' do
+	plugin		
+	action :${2:reload} 
+end

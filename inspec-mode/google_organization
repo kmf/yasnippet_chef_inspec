@@ -1,0 +1,8 @@
+# name: google_organization (InSpec)
+# key: google_organization
+# --
+# https://docs.chef.io/inspec/resources/google_organization
+	describe google_organization(name: "organizations/123456") do
+		its('name') { should eq "organizations/123456" }
+		its('lifecycle_state') { should cmp 'ACTIVE' }
+	end

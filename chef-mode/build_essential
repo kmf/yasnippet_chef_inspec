@@ -1,0 +1,8 @@
+# name: build_essential (Chef)
+# key: build_essential
+# --
+# https://docs.chef.io/resources/build_essential
+build_essential '${1:name}' do
+	raise_if_unsupported	${2:false}		
+	action :${3:install}								
+end

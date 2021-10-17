@@ -1,0 +1,7 @@
+# name: azurerm_subnet (InSpec)
+# key: azurerm_subnet
+# --
+# https://docs.chef.io/inspec/resources/azurerm_subnet
+	describe azurerm_subnet(resource_group: 'MyResourceGroup', vnet: 'MyVnetName', name: 'MySubnetName') do
+				...
+			end

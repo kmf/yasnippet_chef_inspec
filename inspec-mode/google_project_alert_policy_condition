@@ -1,0 +1,7 @@
+# name: google_project_alert_policy_condition (InSpec)
+# key: google_project_alert_policy_condition
+# --
+# https://docs.chef.io/inspec/resources/google_project_alert_policy_condition
+	describe google_project_alert_policy_condition(name: 'projects/spaterson-project/alertPolicies/9271751234503117449', filter 'project=\"spaterson-project\"') do
+				it { should exist }
+			end

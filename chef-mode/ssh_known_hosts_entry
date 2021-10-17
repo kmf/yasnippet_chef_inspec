@@ -1,0 +1,17 @@
+# name: ssh_known_hosts_entry (Chef)
+# key: ssh_known_hosts_entry
+# --
+# https://docs.chef.io/resources/ssh_known_hosts_entry
+ssh_known_hosts_entry '${1:name}' do
+	file_location "${2:/etc/ssh/ssh_known_hosts}" 
+	group				 
+	hash_entries 
+	host				 
+	key					 
+	key_type "${3:rsa}"		 
+	mode "${4:0644}"				 
+	owner				 
+	port				 
+	timeout			 
+	action :${5:create}		
+end

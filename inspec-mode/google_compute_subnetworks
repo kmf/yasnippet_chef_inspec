@@ -1,0 +1,8 @@
+# name: google_compute_subnetworks (InSpec)
+# key: google_compute_subnetworks
+# --
+# https://docs.chef.io/inspec/resources/google_compute_subnetworks
+	describe google_compute_subnetworks(project: 'chef-gcp-inspec', region: 'europe-west2') do
+		its('ip_cidr_ranges') { should include '10.2.0.0/16' }
+		its('subnetwork_names') { should include 'inspec-subnet' }
+	end

@@ -1,0 +1,12 @@
+# name: paludis_package (Chef)
+# key: paludis_package
+# --
+# https://docs.chef.io/resources/paludis_package
+paludis_package '${1:name}' do
+	options					
+	package_name		
+	source					
+	timeout					
+	version					
+	action :${2:install}			 
+end

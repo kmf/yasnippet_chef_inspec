@@ -1,0 +1,7 @@
+# name: aws_s3_buckets (InSpec)
+# key: aws_s3_buckets
+# --
+# https://docs.chef.io/inspec/resources/aws_s3_buckets
+	describe aws_s3_buckets do
+				it { should exist }
+			end

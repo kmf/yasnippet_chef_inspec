@@ -1,0 +1,7 @@
+# name: ip6tables (InSpec)
+# key: ip6tables
+# --
+# https://docs.chef.io/inspec/resources/ip6tables
+	describe ip6tables(rule:'name', table:'name', chain: 'name') do
+				it { should have_rule('RULE') }
+			end

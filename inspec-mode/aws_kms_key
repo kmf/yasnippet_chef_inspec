@@ -1,0 +1,7 @@
+# name: aws_kms_key (InSpec)
+# key: aws_kms_key
+# --
+# https://docs.chef.io/inspec/resources/aws_kms_key
+	describe aws_kms_key('arn:aws:kms:us-east-1::key/4321dcba-21io-23de-85he-ab0987654321') do
+				it { should exist }
+			end

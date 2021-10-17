@@ -1,0 +1,7 @@
+# name: postgres_conf (InSpec)
+# key: postgres_conf
+# --
+# https://docs.chef.io/inspec/resources/postgres_conf
+	describe postgres_conf('path') do
+				its('setting') { should eq 'value' }
+			end

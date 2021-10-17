@@ -1,0 +1,7 @@
+# name: oracledb_session (InSpec)
+# key: oracledb_session
+# --
+# https://docs.chef.io/inspec/resources/oracledb_session
+	describe oracledb_session(user: 'username', password: 'password', service: 'ORCL.localdomain').query('QUERY').row(0).column('result') do
+				its('value') { should eq('') }
+			end

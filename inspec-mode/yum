@@ -1,0 +1,8 @@
+# name: yum (InSpec)
+# key: yum
+# --
+# https://docs.chef.io/inspec/resources/yum
+	describe yum.repo('name') do
+				it { should exist }
+				it { should be_enabled }
+			end

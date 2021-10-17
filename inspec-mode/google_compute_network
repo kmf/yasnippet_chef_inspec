@@ -1,0 +1,8 @@
+# name: google_compute_network (InSpec)
+# key: google_compute_network
+# --
+# https://docs.chef.io/inspec/resources/google_compute_network
+	describe google_compute_network(project: 'chef-gcp-inspec', name: 'inspec-network') do
+		it { should exist }
+		its('routing_config.routing_mode') { should cmp 'REGIONAL' }
+	end

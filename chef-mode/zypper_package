@@ -1,0 +1,15 @@
+# name: zypper_package (Chef)
+# key: zypper_package
+# --
+# https://docs.chef.io/resources/zypper_package
+zypper_package '${1:name}' do
+	allow_downgrade	${2:false}	
+	global_options 
+	gpg_check			 
+	options				 
+	package_name	 
+	source				 
+	timeout				 
+	version				 
+	action :${2:install}	
+end

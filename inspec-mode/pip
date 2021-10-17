@@ -1,0 +1,7 @@
+# name: pip (InSpec)
+# key: pip
+# --
+# https://docs.chef.io/inspec/resources/pip
+	describe pip('package_name') do
+				it { should be_installed }
+			end

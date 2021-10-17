@@ -1,0 +1,7 @@
+# name: mssql_session (InSpec)
+# key: mssql_session
+# --
+# https://docs.chef.io/inspec/resources/mssql_session
+	describe mssql_session(user: 'username', password: 'password').query('QUERY').row(0).column('result') do
+				its('value') { should eq('') }
+			end

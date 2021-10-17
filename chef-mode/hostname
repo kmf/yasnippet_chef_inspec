@@ -1,0 +1,12 @@
+# name: hostname (Chef)
+# key: hostname
+# --
+# https://docs.chef.io/resources/hostname
+hostname '${1:name}' do
+	aliases							
+	compile_time ${2:true}		
+	hostname						
+	ipaddress						
+	windows_reboot	${3:true}
+	action :${4:set}					
+end

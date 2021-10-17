@@ -1,0 +1,7 @@
+# name: aws_iam_user (InSpec)
+# key: aws_iam_user
+# --
+# https://docs.chef.io/inspec/resources/aws_iam_user
+	describe aws_iam_user(user_name: 'psmith') do
+				it { should exist }
+			end

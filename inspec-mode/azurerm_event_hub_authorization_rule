@@ -1,0 +1,7 @@
+# name: azurerm_event_hub_authorization_rule (InSpec)
+# key: azurerm_event_hub_authorization_rule
+# --
+# https://docs.chef.io/inspec/resources/azurerm_event_hub_authorization_rule
+	describe azurerm_event_hub_authorization_rule(resource_group: 'my-rg', namespace_name 'my-event-hub-ns', event_hub_name: 'myeventhub', authorization_rule_name: 'my-auth-rule') do
+				it { should exist }
+			end

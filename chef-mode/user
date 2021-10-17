@@ -1,0 +1,21 @@
+# name: user (Chef)
+# key: user
+# --
+# https://docs.chef.io/resources/user
+user '${1:name}' do
+	comment							 
+	force											
+	gid									 
+	home								 
+	iterations								
+	manage_home								
+	non_unique								
+	password						 
+	salt								 
+	shell								 
+	system										
+	uid												
+	username						 
+	action :${2:create}					
+end
+

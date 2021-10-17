@@ -1,0 +1,7 @@
+# name: notify_group (Chef)
+# key: notify_group
+# --
+# https://docs.chef.io/resources/notify_group
+notify_group '${1:name}' do
+	action :${2:nothing}	
+end

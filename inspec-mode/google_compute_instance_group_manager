@@ -1,0 +1,12 @@
+# name: google_compute_instance_group_manager (InSpec)
+# key: google_compute_instance_group_manager
+# --
+# https://docs.chef.io/inspec/resources/google_compute_instance_group_manager
+	describe google_compute_instance_group_manager(project: 'chef-gcp-inspec', zone: 'zone', name: 'inspec-gcp-igm') do
+		it { should exist }
+	
+		its('base_instance_name') { should eq 'igm' }
+		its('named_ports.count') { should cmp 1 }
+		its('named_ports.first.name') { should eq 'port' }
+		its('named_ports.first.port') { should eq '80' }
+	end

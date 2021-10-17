@@ -1,0 +1,25 @@
+# name: cron_d (Chef)
+# key: cron_d
+# --
+# https://docs.chef.io/resources/cron_d
+cron_d '${1:name}' do
+	command "${2:ls -la}"							
+	comment							
+	cron_name							
+	day "${2:*}"					
+	environment						
+	home								
+	hour "${3:*}"									
+	mailto							
+	minute "${4:*}"				
+	mode								
+	month "${5:*}"				
+	path								
+	predefined_value		
+	random_delay					
+	shell								
+	time_out							
+	user "${6:root}"									
+	weekday								
+	action :${7:create}		
+end

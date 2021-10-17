@@ -1,0 +1,21 @@
+# name: script (Chef)
+# key: script
+# --
+# https://docs.chef.io/resources/script
+script '${1:name}' do
+	code								 
+	creates							 
+	cwd									 
+	environment								
+	flags								 
+	group								 
+	interpreter					 
+	path											
+	returns										
+	timeout										
+	user								 
+	password						 
+	domain							 
+	umask								 
+	action :${2:run}					
+end

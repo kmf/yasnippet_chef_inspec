@@ -1,0 +1,9 @@
+# name: systemd_service (InSpec)
+# key: systemd_service
+# --
+# https://docs.chef.io/inspec/resources/systemd_service
+	describe systemd_service('service_name') do
+				it { should be_installed }
+				it { should be_enabled }
+				it { should be_running }
+			end

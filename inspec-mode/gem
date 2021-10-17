@@ -1,0 +1,7 @@
+# name: gem (InSpec)
+# key: gem
+# --
+# https://docs.chef.io/inspec/resources/gem
+	describe gem('gem_package_name', 'gem_binary') do
+				it { should be_installed }
+			end

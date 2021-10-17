@@ -1,0 +1,12 @@
+# name: freebsd_package (Chef)
+# key: freebsd_package
+# --
+# https://docs.chef.io/resources/freebsd_package
+freebsd_package '${1:name}' do
+	options					
+	package_name		
+	source					
+	timeout					
+	version					
+	action :${2:install}		
+end

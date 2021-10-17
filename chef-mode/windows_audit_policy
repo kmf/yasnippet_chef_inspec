@@ -1,0 +1,16 @@
+# name: windows_audit_policy (Chef)
+# key: windows_audit_policy
+# --
+# https://docs.chef.io/resources/windows_audit_policy
+windows_audit_policy '${1:name}' do
+	audit_base_directories 
+	audit_base_objects		 
+	crash_on_audit_fail		 
+	exclude_user					 
+	failure								 
+	full_privilege_auditing 
+	include_user					 
+	subcategory						 
+	success								 
+	action :${2:set}							
+end

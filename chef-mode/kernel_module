@@ -1,0 +1,11 @@
+# name: kernel_module (Chef)
+# key: kernel_module
+# --
+# https://docs.chef.io/resources/kernel_module
+kernel_module '${1:name}' do
+	load_dir "${2:/etc/modules-load.d}"				
+	modname					
+	options					
+	unload_dir "${3:/etc/modprobe.d}"			
+	action :${4:install}					
+end

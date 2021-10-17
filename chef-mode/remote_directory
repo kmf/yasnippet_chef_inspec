@@ -1,0 +1,22 @@
+# name: remote_directory (Chef)
+# key: remote_directory
+# --
+# https://docs.chef.io/resources/remote_directory
+remote_directory '${1:name}' do
+	cookbook						 
+	files_backup							
+	files_group					 
+	files_mode					 
+	files_owner					 
+	group								 
+	inherits									
+	mode								 
+	overwrite	${2:true}					
+	owner								 
+	path								 
+	purge											
+	recursive									
+	rights										
+	source							 
+	action :${3:create}					
+end

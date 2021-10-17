@@ -1,0 +1,7 @@
+# name: nginx (InSpec)
+# key: nginx
+# --
+# https://docs.chef.io/inspec/resources/nginx
+	describe nginx do
+				its('attribute') { should eq 'value' }
+			end

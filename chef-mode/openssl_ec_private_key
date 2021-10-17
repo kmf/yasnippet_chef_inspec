@@ -1,0 +1,15 @@
+# name: openssl_ec_private_key (Chef)
+# key: openssl_ec_private_key
+# --
+# https://docs.chef.io/resources/openssl_ec_private_key
+openssl_ec_private_key '${1:name}' do
+	force		${2:false}				
+	group					
+	key_cipher "${3:des3}"			
+	key_curve "${4:prime256v1}"				
+	key_pass			
+	mode "${5:0600}"						
+	owner					
+	path						
+	action :${6:create}				
+end

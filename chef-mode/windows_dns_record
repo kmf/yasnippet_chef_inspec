@@ -1,0 +1,12 @@
+# name: windows_dns_record (Chef)
+# key: windows_dns_record
+# --
+# https://docs.chef.io/resources/windows_dns_record
+windows_dns_record '${1:name}' do
+	dns_server "${2:localhost}" 
+	record_name 
+	record_type "${3:ARecord}" 
+	target		 
+	zone			 
+	action :${4:create}		 
+end

@@ -1,0 +1,16 @@
+# name: google_compute_instance_template (InSpec)
+# key: google_compute_instance_template
+# --
+# https://docs.chef.io/inspec/resources/google_compute_instance_template
+	describe google_compute_instance_template(project: 'chef-gcp-inspec', name: 'inspec-gcp-instance-template') do
+		it { should exist }
+		its('description') { should eq 'A description of the instance template' }
+		its('properties.description') { should eq 'A description of the instance itself' }
+		its('properties.machine_type') { should eq 'f1-micro' }
+		its('properties.tags.items') { should include 'foo' }
+		its('properties.disks.count') { should eq 1 }
+		its('properties.disks.first.auto_delete') { should eq 'true' }
+		its('properties.disks.first.boot') { should eq 'true' }
+		its('properties.network_interfaces.count') { should eq 1 }
+		its('properties.service_accounts.count') { should eq 1 }
+	end

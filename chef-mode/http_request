@@ -1,0 +1,10 @@
+# name: http_request (Chef)
+# key: http_request
+# --
+# https://docs.chef.io/resources/http_request
+http_request '${1:name}' do
+	headers										
+	message										
+	url		'${2:http://somehost}'							 
+	action :${3:get}						
+end

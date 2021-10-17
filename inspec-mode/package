@@ -1,0 +1,7 @@
+# name: package (InSpec)
+# key: package
+# --
+# https://docs.chef.io/inspec/resources/package
+	describe package('name') do
+				it { should be_installed }
+			end

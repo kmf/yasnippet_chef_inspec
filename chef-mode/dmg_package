@@ -1,0 +1,21 @@
+# name: dmg_package (Chef)
+# key: dmg_package
+# --
+# https://docs.chef.io/resources/dmg_package
+dmg_package '${1:name}' do
+	accept_eula	${2:false}			
+	allow_untrusted	${3:false}	
+	app						 
+	checksum						
+	destination "${4:/Applications}"		 
+	dmg_name			 
+	dmg_passphrase			
+	file					 
+	headers							
+	owner					 
+	package_id					
+	source				 
+	type "${5:app}"					 
+	volumes_dir		 
+	action :${6:install}		
+end

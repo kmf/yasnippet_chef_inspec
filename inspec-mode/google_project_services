@@ -1,0 +1,9 @@
+# name: google_project_services (InSpec)
+# key: google_project_services
+# --
+# https://docs.chef.io/inspec/resources/google_project_services
+	describe.one do
+		google_project_services(project: 'chef-gcp-inspec').names.each do |name|
+			describe name do
+				it { should match 'maps-android-backend.googleapis.com' }
+			end

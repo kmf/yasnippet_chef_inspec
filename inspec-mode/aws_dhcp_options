@@ -1,0 +1,7 @@
+# name: aws_dhcp_options (InSpec)
+# key: aws_dhcp_options
+# --
+# https://docs.chef.io/inspec/resources/aws_dhcp_options
+	describe aws_dhcp_options('dopt-0123456789abcdefg') do
+				it { should exist }
+			end

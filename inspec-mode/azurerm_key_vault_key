@@ -1,0 +1,8 @@
+# name: azurerm_key_vault_key (InSpec)
+# key: azurerm_key_vault_key
+# --
+# https://docs.chef.io/inspec/resources/azurerm_key_vault_key
+	describe azurerm_key_vault_key('vault-101', 'secret-key') do
+				its('key.kid')						{ should_not be_nil }
+				its('attributes.enabled') { should eq true }
+			end

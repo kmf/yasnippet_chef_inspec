@@ -1,0 +1,7 @@
+# name: aws_rds_clusters (InSpec)
+# key: aws_rds_clusters
+# --
+# https://docs.chef.io/inspec/resources/aws_rds_clusters
+	describe aws_rds_clusters do
+				its('db_cluster_identifiers.count') { should cmp 3 }
+			end

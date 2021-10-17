@@ -1,0 +1,7 @@
+# name: elasticsearch (InSpec)
+# key: elasticsearch
+# --
+# https://docs.chef.io/inspec/resources/elasticsearch
+	describe elasticsearch do
+				its('property') { should cmp 'value' }
+			end

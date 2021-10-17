@@ -1,0 +1,9 @@
+# name: google_compute_health_check (InSpec)
+# key: google_compute_health_check
+# --
+# https://docs.chef.io/inspec/resources/google_compute_health_check
+	describe google_compute_health_check(project: 'chef-gcp-inspec', name: 'inspec-gcp-health-check') do
+		it { should exist }
+		its('timeout_sec') { should eq '10' }
+		its('tcp_health_check.port') { should eq '80' }
+	end

@@ -1,0 +1,7 @@
+# name: vbscript (InSpec)
+# key: vbscript
+# --
+# https://docs.chef.io/inspec/resources/vbscript
+	describe vbscript('script contents') do
+				its('stdout') { should eq 'output' }
+			end

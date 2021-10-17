@@ -1,0 +1,7 @@
+# name: aws_cloudwatch_alarm (InSpec)
+# key: aws_cloudwatch_alarm
+# --
+# https://docs.chef.io/inspec/resources/aws_cloudwatch_alarm
+	describe aws_cloudwatch_alarm(metric_name: 'my-metric-name', metric_namespace: 'my-metric-namespace') do
+				its('alarm_actions') { should_not be_empty }
+			end

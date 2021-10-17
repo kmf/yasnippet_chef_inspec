@@ -1,0 +1,10 @@
+# name: google_compute_region_backend_service (InSpec)
+# key: google_compute_region_backend_service
+# --
+# https://docs.chef.io/inspec/resources/google_compute_region_backend_service
+	describe google_compute_region_backend_service(project: 'chef-gcp-inspec', region: 'europe-west2', name: 'inspec-gcp-region-backend-service') do
+		it { should exist }
+		its('description') { should eq 'A regional description' }
+		its('protocol') { should eq 'TCP' }
+		its('timeout_sec') { should eq '15' }
+	end

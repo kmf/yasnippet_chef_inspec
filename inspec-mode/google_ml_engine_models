@@ -1,0 +1,9 @@
+# name: google_ml_engine_models (InSpec)
+# key: google_ml_engine_models
+# --
+# https://docs.chef.io/inspec/resources/google_ml_engine_models
+	describe google_ml_engine_models(project: 'chef-gcp-inspec') do
+		its('descriptions') { should include 'My awesome ML model' }
+		its('online_prediction_loggings') { should include 'true' }
+		its('online_prediction_console_loggings') { should include 'true' }
+	end

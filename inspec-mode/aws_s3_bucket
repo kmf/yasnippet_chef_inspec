@@ -1,0 +1,8 @@
+# name: aws_s3_bucket (InSpec)
+# key: aws_s3_bucket
+# --
+# https://docs.chef.io/inspec/resources/aws_s3_bucket
+	describe aws_s3_bucket(bucket_name: 'test_bucket') do
+				it { should exist }
+				it { should_not be_public }
+			end

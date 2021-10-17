@@ -1,0 +1,7 @@
+# name: aws_ebs_volumes (InSpec)
+# key: aws_ebs_volumes
+# --
+# https://docs.chef.io/inspec/resources/aws_ebs_volumes
+	describe aws_ebs_volumes do
+				its('volume_ids.count') { should cmp 3 }
+			end

@@ -1,0 +1,15 @@
+# name: windows_ad_join (Chef)
+# key: windows_ad_join
+# --
+# https://docs.chef.io/resources/windows_ad_join
+windows_ad_join '${1:name}' do
+	domain_name		 
+	domain_password 
+	domain_user		 
+	new_hostname	 
+	ou_path				 
+	reboot				 
+	reboot_delay	 
+	workgroup_name 
+	action :${2:join}			
+end

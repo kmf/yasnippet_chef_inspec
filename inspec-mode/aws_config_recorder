@@ -1,0 +1,7 @@
+# name: aws_config_recorder (InSpec)
+# key: aws_config_recorder
+# --
+# https://docs.chef.io/inspec/resources/aws_config_recorder
+	describe aws_config_recorder('my-recorder') do
+				it { should exist }
+			end

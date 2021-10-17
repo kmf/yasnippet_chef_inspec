@@ -1,0 +1,7 @@
+# name: breakpoint (Chef)
+# key: breakpoint
+# --
+# https://docs.chef.io/resources/breakpoint
+breakpoint '${1:name}' do
+	action :${2:break}
+end

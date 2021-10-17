@@ -1,0 +1,9 @@
+# name: chef_client_trusted_certificate (Chef)
+# key: chef_client_trusted_certificate
+# --
+# https://docs.chef.io/resources/chef_client_trusted_certificate
+chef_client_trusted_certificate '${1:name}' do
+	cert_name	 
+	certificate 
+	action :${2:add}					
+end

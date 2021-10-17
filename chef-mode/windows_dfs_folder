@@ -1,0 +1,11 @@
+# name: windows_dfs_folder (Chef)
+# key: windows_dfs_folder
+# --
+# https://docs.chef.io/resources/windows_dfs_folder
+windows_dfs_folder '${1:name}' do
+	description				
+	folder_path					
+	namespace_name		
+	target_path				
+	action :${2:create}				
+end

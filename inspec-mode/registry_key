@@ -1,0 +1,7 @@
+# name: registry_key (InSpec)
+# key: registry_key
+# --
+# https://docs.chef.io/inspec/resources/registry_key
+	describe registry_key('Task Scheduler','HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\Schedule') do
+				its('Start') { should eq 2 }
+			end

@@ -1,0 +1,7 @@
+# name: aws_sqs_queue (InSpec)
+# key: aws_sqs_queue
+# --
+# https://docs.chef.io/inspec/resources/aws_sqs_queue
+	describe aws_sqs_queue(queue_url: 'https://sqs.ap-southeast-2.amazonaws.com/1212121/MyQueue') do
+				it { should exist }
+			end

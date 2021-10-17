@@ -1,0 +1,7 @@
+# name: aws_iam_groups (InSpec)
+# key: aws_iam_groups
+# --
+# https://docs.chef.io/inspec/resources/aws_iam_groups
+	describe aws_iam_groups('mygroup') do
+				it { should exist }
+			end

@@ -1,0 +1,11 @@
+# name: chef_handler (Chef)
+# key: chef_handler
+# --
+# https://docs.chef.io/resources/chef_handler
+chef_handler '${1:name}' do
+	arguments			
+	class_name			
+	source				
+	type					
+	action :${2:enable}					
+end

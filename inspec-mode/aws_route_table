@@ -1,0 +1,7 @@
+# name: aws_route_table (InSpec)
+# key: aws_route_table
+# --
+# https://docs.chef.io/inspec/resources/aws_route_table
+	describe aws_route_table('rtb-123abcde') do
+				it { should exist }
+			end

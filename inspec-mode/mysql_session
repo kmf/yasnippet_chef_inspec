@@ -1,0 +1,7 @@
+# name: mysql_session (InSpec)
+# key: mysql_session
+# --
+# https://docs.chef.io/inspec/resources/mysql_session
+	describe mysql_session('username', 'password').query('QUERY') do
+				its('output') { should match(/expected-result/) }
+			end

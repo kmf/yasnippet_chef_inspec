@@ -1,0 +1,7 @@
+# name: google_compute_router_nats (InSpec)
+# key: google_compute_router_nats
+# --
+# https://docs.chef.io/inspec/resources/google_compute_router_nats
+	describe google_compute_router_nats(project: 'chef-gcp-inspec', region: 'europe-west2', router: 'inspec-gcp-router') do
+		its('names') { should include 'inspec-router-nat' }
+	end

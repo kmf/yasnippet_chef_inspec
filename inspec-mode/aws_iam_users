@@ -1,0 +1,7 @@
+# name: aws_iam_users (InSpec)
+# key: aws_iam_users
+# --
+# https://docs.chef.io/inspec/resources/aws_iam_users
+	describe aws_iam_users do
+				its('usernames') { should include 'payroll-admin' }
+			end

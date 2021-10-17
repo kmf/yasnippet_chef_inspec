@@ -1,0 +1,10 @@
+# name: google_compute_address (InSpec)
+# key: google_compute_address
+# --
+# https://docs.chef.io/inspec/resources/google_compute_address
+	describe google_compute_address(project: 'chef-gcp-inspec', location: 'europe-west2', name: 'inspec-gcp-global-address') do
+		it { should exist }
+		its('address') { should eq '10.2.0.3' }
+		its('address_type') { should eq 'INTERNAL' }
+		its('user_count') { should eq 0 }
+	end

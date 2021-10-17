@@ -1,0 +1,16 @@
+# name: windows_package (Chef)
+# key: windows_package
+# --
+# https://docs.chef.io/resources/windows_package
+windows_package '${1:name}' do
+	checksum									
+	installer_type						
+	options										
+	package_name							
+	remote_file_attributes		
+	returns										
+	source "${2:The resource block's name}"											
+	timeout										
+	version										
+	action :${3:install}				
+end

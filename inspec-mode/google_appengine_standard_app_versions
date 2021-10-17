@@ -1,0 +1,7 @@
+# name: google_appengine_standard_app_versions (InSpec)
+# key: google_appengine_standard_app_versions
+# --
+# https://docs.chef.io/inspec/resources/google_appengine_standard_app_versions
+	describe google_appengine_standard_app_versions(project: 'chef-gcp-inspec', location: 'europe-west2',service: 'default') do
+		its('runtimes') { should include 'nodejs10' }
+	end

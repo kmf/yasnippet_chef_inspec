@@ -1,0 +1,7 @@
+# name: azure_resource_group (InSpec)
+# key: azure_resource_group
+# --
+# https://docs.chef.io/inspec/resources/azure_resource_group
+	describe azure_resource_group(name: 'MyResourceGroup') do
+				its('property') { should eq 'value' }
+			end

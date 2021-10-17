@@ -1,0 +1,7 @@
+# name: aws_internet_gateway (InSpec)
+# key: aws_internet_gateway
+# --
+# https://docs.chef.io/inspec/resources/aws_internet_gateway
+	describe aws_internet_gateway(id: 'igw-abc0123456789deff') do
+				it { should exist }
+			end

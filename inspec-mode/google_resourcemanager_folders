@@ -1,0 +1,9 @@
+# name: google_resourcemanager_folders (InSpec)
+# key: google_resourcemanager_folders
+# --
+# https://docs.chef.io/inspec/resources/google_resourcemanager_folders
+	describe.one do
+		google_resourcemanager_folders(parent: 'organizations/12345').display_names.each do |display_name|
+			describe display_name do
+				it { should eq 'inspec-gcp-folder' }
+			end

@@ -1,0 +1,11 @@
+# name: windows_workgroup (Chef)
+# key: windows_workgroup
+# --
+# https://docs.chef.io/resources/windows_workgroup
+windows_workgroup '${1:name}' do
+	password					
+	reboot						
+	user							
+	workgroup_name		
+	action :${2:join}				
+end

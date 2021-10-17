@@ -1,0 +1,7 @@
+# name: aws_eks_cluster (InSpec)
+# key: aws_eks_cluster
+# --
+# https://docs.chef.io/inspec/resources/aws_eks_cluster
+	describe aws_eks_cluster('my-eks') do
+				it { should exist }
+			end

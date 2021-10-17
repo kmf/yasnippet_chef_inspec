@@ -1,0 +1,7 @@
+# name: google_logging_project_exclusions (InSpec)
+# key: google_logging_project_exclusions
+# --
+# https://docs.chef.io/inspec/resources/google_logging_project_exclusions
+	describe google_logging_project_exclusions(project: 'chef-gcp-inspec') do
+		its('names'){ should include 'inspec-folder-exclusion' }
+	end

@@ -1,0 +1,14 @@
+# name: plist (Chef)
+# key: plist
+# --
+# https://docs.chef.io/resources/plist
+plist '${1:name}' do
+	encoding "${2:binary}"			
+	entry				
+	group "${3:wheel}"					
+	mode				
+	owner "${4:root}"					
+	path					
+	value					
+	action :${5:set}				
+end

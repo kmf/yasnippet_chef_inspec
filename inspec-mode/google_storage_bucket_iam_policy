@@ -1,0 +1,7 @@
+# name: google_storage_bucket_iam_policy (InSpec)
+# key: google_storage_bucket_iam_policy
+# --
+# https://docs.chef.io/inspec/resources/google_storage_bucket_iam_policy
+	describe google_storage_bucket_iam_policy(bucket: "bucket") do
+		it { should exist }
+	end

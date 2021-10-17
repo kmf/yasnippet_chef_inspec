@@ -1,0 +1,7 @@
+# name: google_project_iam_bindings (InSpec)
+# key: google_project_iam_bindings
+# --
+# https://docs.chef.io/inspec/resources/google_project_iam_bindings
+	describe google_project_iam_bindings(project: 'chef-inspec-gcp') do
+				it { should exist }
+			end

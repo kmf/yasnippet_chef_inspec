@@ -1,0 +1,7 @@
+# name: azurerm_storage_account_blob_containers (InSpec)
+# key: azurerm_storage_account_blob_containers
+# --
+# https://docs.chef.io/inspec/resources/azurerm_storage_account_blob_containers
+	describe azurerm_storage_account_blob_containers(resource_group: 'rg', storage_account_name: 'production') do
+					...
+			end

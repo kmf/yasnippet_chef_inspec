@@ -1,0 +1,14 @@
+# name: dnf_package (Chef)
+# key: dnf_package
+# --
+# https://docs.chef.io/resources/dnf_package
+dnf_package '${1:name}' do
+	arch						
+	flush_cache			
+	options					
+	package_name		
+	source					
+	timeout					
+	version					
+	action :${2:install}			
+end

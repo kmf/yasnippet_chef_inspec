@@ -1,0 +1,10 @@
+# name: google_sql_database_instance (InSpec)
+# key: google_sql_database_instance
+# --
+# https://docs.chef.io/inspec/resources/google_sql_database_instance
+	describe google_sql_database_instance(project: 'chef-gcp-inspec', database: 'my-database') do
+		it { should exist }
+		its('state') { should eq 'RUNNABLE' }
+		its('backend_type') { should eq 'SECOND_GEN' }
+		its('database_version') { should eq 'MYSQL_5_7' }
+	end

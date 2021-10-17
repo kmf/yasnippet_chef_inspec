@@ -1,0 +1,7 @@
+# name: azurerm_ad_users (InSpec)
+# key: azurerm_ad_users
+# --
+# https://docs.chef.io/inspec/resources/azurerm_ad_users
+	describe azurerm_ad_users do
+				...
+			end

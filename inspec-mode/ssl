@@ -1,0 +1,7 @@
+# name: ssl (InSpec)
+# key: ssl
+# --
+# https://docs.chef.io/inspec/resources/ssl
+	describe ssl(port: #) do
+				it { should be_enabled }
+			end

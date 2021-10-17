@@ -1,0 +1,20 @@
+# name: mount (Chef)
+# key: mount
+# --
+# https://docs.chef.io/resources/mount
+mount '${1:name}' do
+	device		 
+	device_type 
+	domain		 
+	dump			 
+	enabled ${2:false}		
+	fsck_device "${3:-}" 
+	fstype "${4:auto}"		 
+	mount_point 
+	options		 
+	pass			 
+	password	 
+	supports	 
+	username	 
+	action :${5:mount}					
+end

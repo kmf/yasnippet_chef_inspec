@@ -1,0 +1,11 @@
+# name: windows_auto_run (Chef)
+# key: windows_auto_run
+# --
+# https://docs.chef.io/resources/windows_auto_run
+windows_auto_run '${1:name}' do
+	args						
+	path						
+	program_name			
+	root							
+	action :${2:create}			
+end

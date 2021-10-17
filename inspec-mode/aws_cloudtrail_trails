@@ -1,0 +1,7 @@
+# name: aws_cloudtrail_trails (InSpec)
+# key: aws_cloudtrail_trails
+# --
+# https://docs.chef.io/inspec/resources/aws_cloudtrail_trails
+	describe aws_cloudtrail_trails do
+				it { should exist }
+			end

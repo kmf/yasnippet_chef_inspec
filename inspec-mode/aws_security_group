@@ -1,0 +1,7 @@
+# name: aws_security_group (InSpec)
+# key: aws_security_group
+# --
+# https://docs.chef.io/inspec/resources/aws_security_group
+	describe aws_security_group('sg-12345678') do
+				it { should exist }
+			end

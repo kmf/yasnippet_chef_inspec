@@ -1,0 +1,12 @@
+# name: windows_pagefile (Chef)
+# key: windows_pagefile
+# --
+# https://docs.chef.io/resources/windows_pagefile
+windows_pagefile '${1:name}' do
+	automatic_managed ${2:false}		
+	initial_size		 
+	maximum_size		 
+	path						 
+	system_managed	 
+	action :${3:set}				
+end

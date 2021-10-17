@@ -1,0 +1,9 @@
+# name: google_project_iam_custom_role (InSpec)
+# key: google_project_iam_custom_role
+# --
+# https://docs.chef.io/inspec/resources/google_project_iam_custom_role
+	describe google_project_iam_custom_role(project: 'chef-gcp-inspec', name: 'admin-role') do
+		it { should exist }
+		its('stage') { should eq 'GA' }
+		its('included_permissions') { should eq ["iam.roles.list"] }
+	end

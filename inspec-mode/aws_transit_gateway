@@ -1,0 +1,7 @@
+# name: aws_transit_gateway (InSpec)
+# key: aws_transit_gateway
+# --
+# https://docs.chef.io/inspec/resources/aws_transit_gateway
+	describe aws_transit_gateway(transit_gateway_id: 'tgw-1234567') do
+				it { should exist }
+			end

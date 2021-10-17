@@ -1,0 +1,7 @@
+# name: azurerm_postgresql_servers (InSpec)
+# key: azurerm_postgresql_servers
+# --
+# https://docs.chef.io/inspec/resources/azurerm_postgresql_servers
+	describe azurerm_postgresql_servers do
+				...
+			end

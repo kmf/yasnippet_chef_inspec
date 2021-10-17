@@ -1,0 +1,7 @@
+# name: google_runtime_config_variables (InSpec)
+# key: google_runtime_config_variables
+# --
+# https://docs.chef.io/inspec/resources/google_runtime_config_variables
+	describe google_runtime_config_variables(project: 'chef-gcp-inspec', config: 'inspec-gcp-runtime-config') do
+		its('texts') { should include 'example.com' }
+	end

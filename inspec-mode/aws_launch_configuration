@@ -1,0 +1,8 @@
+# name: aws_launch_configuration (InSpec)
+# key: aws_launch_configuration
+# --
+# https://docs.chef.io/inspec/resources/aws_launch_configuration
+	describe aws_launch_configuration('my-config') do
+				it							{ should exist }
+				its('key_name') { should be 'my-key-name' }
+			end

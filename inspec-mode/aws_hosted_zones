@@ -1,0 +1,7 @@
+# name: aws_hosted_zones (InSpec)
+# key: aws_hosted_zones
+# --
+# https://docs.chef.io/inspec/resources/aws_hosted_zones
+	describe aws_hosted_zones do
+		its('names') { should include ("carry-on.films.com") }
+	end

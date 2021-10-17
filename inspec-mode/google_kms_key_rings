@@ -1,0 +1,7 @@
+# name: google_kms_key_rings (InSpec)
+# key: google_kms_key_rings
+# --
+# https://docs.chef.io/inspec/resources/google_kms_key_rings
+	describe google_kms_key_rings(project: 'chef-gcp-inspec', location: 'europe-west2') do
+		its('key_ring_names'){ should include 'kms-key-ring' }
+	end

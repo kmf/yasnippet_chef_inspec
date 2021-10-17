@@ -1,0 +1,7 @@
+# name: aws_ec2_instances (InSpec)
+# key: aws_ec2_instances
+# --
+# https://docs.chef.io/inspec/resources/aws_ec2_instances
+	describe aws_ec2_instances
+				it { should exist }
+			end

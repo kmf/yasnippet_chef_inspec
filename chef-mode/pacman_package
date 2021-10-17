@@ -1,0 +1,12 @@
+# name: pacman_package (Chef)
+# key: pacman_package
+# --
+# https://docs.chef.io/resources/pacman_package
+pacman_package '${1:name}' do
+	options					
+	package_name		
+	source					
+	timeout					
+	version					
+	action :${2:install}				
+end

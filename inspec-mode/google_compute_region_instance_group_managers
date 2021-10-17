@@ -1,0 +1,8 @@
+# name: google_compute_region_instance_group_managers (InSpec)
+# key: google_compute_region_instance_group_managers
+# --
+# https://docs.chef.io/inspec/resources/google_compute_region_instance_group_managers
+	describe google_compute_region_instance_group_managers(project: 'chef-gcp-inspec', region: 'europe-west2') do
+		its('instance_group_manager_names') { should include 'inspec-rigm' }
+		its('base_instance_names') { should include 'rigm1' }
+	end

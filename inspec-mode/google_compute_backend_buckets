@@ -1,0 +1,8 @@
+# name: google_compute_backend_buckets (InSpec)
+# key: google_compute_backend_buckets
+# --
+# https://docs.chef.io/inspec/resources/google_compute_backend_buckets
+	describe google_compute_backend_buckets(project: 'chef-gcp-inspec', name: 'inspec-gcp-backend-bucket') do
+		its('descriptions') { should include 'Backend bucket example' }
+		its('bucket_names') { should include 'gcp-inspec-storage-bucket' }
+	end

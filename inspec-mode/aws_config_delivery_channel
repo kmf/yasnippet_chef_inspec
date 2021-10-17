@@ -1,0 +1,7 @@
+# name: aws_config_delivery_channel (InSpec)
+# key: aws_config_delivery_channel
+# --
+# https://docs.chef.io/inspec/resources/aws_config_delivery_channel
+	describe aws_config_delivery_channel('my_channel') do
+				it { should exist }
+			end

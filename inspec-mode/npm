@@ -1,0 +1,7 @@
+# name: npm (InSpec)
+# key: npm
+# --
+# https://docs.chef.io/inspec/resources/npm
+	describe npm('npm_package_name') do
+				it { should be_installed }
+			end

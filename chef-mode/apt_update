@@ -1,0 +1,8 @@
+# name: apt_update (Chef)
+# key: apt_update
+# --
+# https://docs.chef.io/resources/apt_update
+apt_update '${1:name}' do
+	frequency ${2:86400}   
+	action :${3:periodic}	 
+end

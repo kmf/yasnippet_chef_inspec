@@ -1,0 +1,7 @@
+# name: oneget (InSpec)
+# key: oneget
+# --
+# https://docs.chef.io/inspec/resources/oneget
+	describe oneget('name') do
+				it { should be_installed }
+			end

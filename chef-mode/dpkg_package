@@ -1,0 +1,14 @@
+# name: dpkg_package (Chef)
+# key: dpkg_package
+# --
+# https://docs.chef.io/resources/dpkg_package
+dpkg_package '${1:name}' do
+	options								 
+	package_name					 
+	response_file					 
+	response_file_variables 
+	source								 
+	timeout								 
+	version								 
+	action :${2:install}					
+end

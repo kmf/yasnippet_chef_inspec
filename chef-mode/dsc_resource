@@ -1,0 +1,13 @@
+# name: dsc_resource (Chef)
+# key: dsc_resource
+# --
+# https://docs.chef.io/resources/dsc_resource
+dsc_resource '${1:name}' do
+	module_name					 
+	module_version			 
+	property						 
+	reboot_action				 
+	resource						 
+	timeout							 
+	action :${2:run}						
+end

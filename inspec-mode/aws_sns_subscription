@@ -1,0 +1,7 @@
+# name: aws_sns_subscription (InSpec)
+# key: aws_sns_subscription
+# --
+# https://docs.chef.io/inspec/resources/aws_sns_subscription
+	describe aws_sns_subscription('arn:aws:sns:us-east-1::test-topic-01:b214aff5-a2c7-438f-a753-8494493f2ff6') do
+				it { should exist }
+			end

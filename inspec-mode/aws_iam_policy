@@ -1,0 +1,7 @@
+# name: aws_iam_policy (InSpec)
+# key: aws_iam_policy
+# --
+# https://docs.chef.io/inspec/resources/aws_iam_policy
+	describe aws_iam_policy('AWSSupportAccess') do
+				it { should exist }
+			end

@@ -1,0 +1,7 @@
+# name: google_compute_instances (InSpec)
+# key: google_compute_instances
+# --
+# https://docs.chef.io/inspec/resources/google_compute_instances
+	describe google_compute_instances(project: 'chef-gcp-inspec', zone: 'zone') do
+		its('instance_names') { should include 'inspec-instance' }
+	end

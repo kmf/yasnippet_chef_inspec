@@ -1,0 +1,11 @@
+# name: windows_feature_dism (Chef)
+# key: windows_feature_dism
+# --
+# https://docs.chef.io/resources/windows_feature_dism
+windows_feature_dism '${1:name}' do
+	all	${2:false}				
+	feature_name			
+	source					
+	timeout						
+	action :${3:install}		
+end

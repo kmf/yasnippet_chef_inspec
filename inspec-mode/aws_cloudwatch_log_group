@@ -1,0 +1,7 @@
+# name: aws_cloudwatch_log_group (InSpec)
+# key: aws_cloudwatch_log_group
+# --
+# https://docs.chef.io/inspec/resources/aws_cloudwatch_log_group
+	describe aws_cloudwatch_log_group('my_log_group') do
+				it { should exist }
+			end

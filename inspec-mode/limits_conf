@@ -1,0 +1,8 @@
+# name: limits_conf (InSpec)
+# key: limits_conf
+# --
+# https://docs.chef.io/inspec/resources/limits_conf
+	describe limits_conf('path') do
+				its('domain') { should include ['type', 'item', 'value'] }
+				its('domain') { should eq ['type', 'item', 'value'] }
+			end

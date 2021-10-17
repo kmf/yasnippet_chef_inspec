@@ -1,0 +1,15 @@
+# name: chef_gem (Chef)
+# key: chef_gem
+# --
+# https://docs.chef.io/resources/chef_gem
+chef_gem '${1:name}' do
+	clear_sources							
+	gem_binary								
+	include_default_source		
+	options										
+	package_name							
+	source										
+	timeout										
+	version										
+	action :${2:install}			
+end

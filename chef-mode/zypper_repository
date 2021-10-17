@@ -1,0 +1,24 @@
+# name: zypper_repository (Chef)
+# key: zypper_repository
+# --
+# https://docs.chef.io/resources/zypper_repository
+zypper_repository '${1:name}' do
+	autorefresh	${2:true}		  
+	baseurl					 
+	cookbook				 
+	description			 
+	enabled	${3:true}				  
+	gpgautoimportkeys ${4:true}  
+	gpgcheck ${5:true}				  
+	gpgkey					 
+	keeppackages ${6:false}		  
+	mirrorlist			 
+	mode						 
+	path						 
+	priority				 
+	refresh_cache ${7:true}		  
+	repo_name				 
+	source					 
+	type "${8:NONE}"						 
+	action :${9:create}					  
+end

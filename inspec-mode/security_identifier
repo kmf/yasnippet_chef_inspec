@@ -1,0 +1,7 @@
+# name: security_identifier (InSpec)
+# key: security_identifier
+# --
+# https://docs.chef.io/inspec/resources/security_identifier
+	describe security_identifier(group: 'Everyone') do
+				its('sid') { should eq 'S-1-1-0' }
+			end

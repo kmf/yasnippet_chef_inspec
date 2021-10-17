@@ -1,0 +1,12 @@
+# name: swap_file (Chef)
+# key: swap_file
+# --
+# https://docs.chef.io/resources/swap_file
+swap_file '${1:name}' do
+	path						
+	persist					
+	size						
+	swappiness			
+	timeout					
+	action :${2:create}		
+end

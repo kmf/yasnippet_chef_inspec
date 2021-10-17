@@ -1,0 +1,12 @@
+# name: google_compute_autoscalers (InSpec)
+# key: google_compute_autoscalers
+# --
+# https://docs.chef.io/inspec/resources/google_compute_autoscalers
+	describe.one do
+		autoscalers.autoscaling_policies.each do |autoscaling_policy|
+			describe autoscaling_policy do
+					its('max_num_replicas') { should eq '5' }
+					its('min_num_replicas') { should eq '1' }
+					its('cool_down_period_sec') { should eq '60' }
+					its('cpu_utilization.utilization_target') { should eq '0.5' }
+			end

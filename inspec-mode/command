@@ -1,0 +1,8 @@
+# name: command (InSpec)
+# key: command
+# --
+# https://docs.chef.io/inspec/resources/command
+	describe command('command') do
+				it { should exist }
+				its('property') { should eq 'value' }
+			end

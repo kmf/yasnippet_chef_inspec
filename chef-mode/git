@@ -1,0 +1,21 @@
+# name: git (Chef)
+# key: git
+# --
+# https://docs.chef.io/resources/git
+git '${1:name}' do
+	additional_remotes		
+	checkout_branch				
+	depth									
+	destination							
+	enable_checkout		${2:true}			
+	enable_submodules	${3:false}		
+	environment						
+	group									
+	remote "${4:origin}"									
+	repository						
+	revision "${5:HEAD}"								
+	ssh_wrapper						
+	timeout								
+	user									
+	action :${6:sync}			
+end

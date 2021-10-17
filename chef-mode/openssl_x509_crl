@@ -1,0 +1,18 @@
+# name: openssl_x509_crl (Chef)
+# key: openssl_x509_crl
+# --
+# https://docs.chef.io/resources/openssl_x509_crl
+openssl_x509_crl '${1:name}' do
+	ca_cert_file					
+	ca_key_file						
+	ca_key_pass						
+	expire								
+	group						 
+	mode									
+	owner						 
+	path						 
+	renewal_threshold			
+	revocation_reason			
+	serial_to_revoke			
+	action :${2:create}			
+end

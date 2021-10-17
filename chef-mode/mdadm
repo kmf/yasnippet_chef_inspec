@@ -1,0 +1,14 @@
+# name: mdadm (Chef)
+# key: mdadm
+# --
+# https://docs.chef.io/resources/mdadm
+mdadm '${1:name}' do
+	bitmap					
+	chunk						
+	devices					
+	layout					
+	level						
+	metadata "${2:0.90}"	 
+	raid_device 
+	action :${3:create}			
+end

@@ -1,0 +1,20 @@
+# name: file (Chef)
+# key: file
+# --
+# https://docs.chef.io/resources/file
+file '${1:name}' do
+	atomic_update							
+	backup										
+	checksum									
+	content										
+	force_unlink							
+	group											
+	inherits									
+	manage_symlink_source			
+	mode											
+	owner											
+	path '${2:name}' 
+	rights										
+	verify										
+	action :${3:create}					
+end

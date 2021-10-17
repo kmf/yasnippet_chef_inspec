@@ -1,0 +1,8 @@
+# name: etc_hosts_allow (InSpec)
+# key: etc_hosts_allow
+# --
+# https://docs.chef.io/inspec/resources/etc_hosts_allow
+	describe etc_hosts_allow.where { daemon == 'value' } do
+				its ('client_list') { should include ['values'] }
+				its ('options') { should include ['values'] }
+			end

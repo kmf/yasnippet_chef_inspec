@@ -1,0 +1,7 @@
+# name: azurerm_aks_cluster (InSpec)
+# key: azurerm_aks_cluster
+# --
+# https://docs.chef.io/inspec/resources/azurerm_aks_cluster
+	describe azurerm_aks_cluster(resource_group: 'example', name: 'ClusterName') do
+				...
+			end

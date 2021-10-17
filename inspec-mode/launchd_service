@@ -1,0 +1,9 @@
+# name: launchd_service (InSpec)
+# key: launchd_service
+# --
+# https://docs.chef.io/inspec/resources/launchd_service
+	describe launchd_service('service_name') do
+				it { should be_installed }
+				it { should be_enabled }
+				it { should be_running }
+			end

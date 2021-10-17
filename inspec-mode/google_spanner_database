@@ -1,0 +1,8 @@
+# name: google_spanner_database (InSpec)
+# key: google_spanner_database
+# --
+# https://docs.chef.io/inspec/resources/google_spanner_database
+	describe google_spanner_database(project: 'chef-gcp-inspec', instance: 'spinstance', name: 'spdatabase') do
+		it { should exist }
+		its('name') { should match 'spdatabase' }
+	end

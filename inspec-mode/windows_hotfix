@@ -1,0 +1,7 @@
+# name: windows_hotfix (InSpec)
+# key: windows_hotfix
+# --
+# https://docs.chef.io/inspec/resources/windows_hotfix
+	describe windows_hotfix('name') do
+				it { should be_installed }
+			end

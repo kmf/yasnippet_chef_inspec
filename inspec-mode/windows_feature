@@ -1,0 +1,7 @@
+# name: windows_feature (InSpec)
+# key: windows_feature
+# --
+# https://docs.chef.io/inspec/resources/windows_feature
+	describe windows_feature('feature_name') do
+				it { should be_installed }
+			end

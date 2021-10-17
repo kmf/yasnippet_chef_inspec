@@ -1,0 +1,13 @@
+# name: windows_shortcut (Chef)
+# key: windows_shortcut
+# --
+# https://docs.chef.io/resources/windows_shortcut
+windows_shortcut '${1:name}' do
+	arguments					
+	cwd					 
+	description				
+	iconlocation			
+	shortcut_name 
+	target						
+	action :${2:create}			
+end

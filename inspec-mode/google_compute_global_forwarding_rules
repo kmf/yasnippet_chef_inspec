@@ -1,0 +1,8 @@
+# name: google_compute_global_forwarding_rules (InSpec)
+# key: google_compute_global_forwarding_rules
+# --
+# https://docs.chef.io/inspec/resources/google_compute_global_forwarding_rules
+	describe google_compute_global_forwarding_rules(project: 'chef-gcp-inspec') do
+		its('count') { should be >= 1 }
+		its('port_ranges') { should include '80-80' }
+	end

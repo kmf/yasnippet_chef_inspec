@@ -1,0 +1,7 @@
+# name: azurerm_mysql_server (InSpec)
+# key: azurerm_mysql_server
+# --
+# https://docs.chef.io/inspec/resources/azurerm_mysql_server
+	describe azurerm_mysql_server(resource_group: 'inspec-resource-group-9', server_name: 'example_server') do
+				it { should exist }
+			end

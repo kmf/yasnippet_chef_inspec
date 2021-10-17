@@ -1,0 +1,8 @@
+# name: chef_sleep (Chef)
+# key: chef_sleep
+# --
+# https://docs.chef.io/resources/chef_sleep
+chef_sleep '${1:name}' do
+	seconds 
+	action :${2:sleep} 
+end

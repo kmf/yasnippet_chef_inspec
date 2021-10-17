@@ -1,0 +1,12 @@
+# name: macports_package (Chef)
+# key: macports_package
+# --
+# https://docs.chef.io/resources/macports_package
+macports_package '${1:name}' do
+	options					
+	package_name		
+	source					
+	timeout					
+	version					
+	action :${2:install}		
+end

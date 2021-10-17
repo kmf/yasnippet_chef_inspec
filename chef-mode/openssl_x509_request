@@ -1,0 +1,23 @@
+# name: openssl_x509_request (Chef)
+# key: openssl_x509_request
+# --
+# https://docs.chef.io/resources/openssl_x509_request
+openssl_x509_request '${1:name}' do
+	city			 
+	common_name 
+	country		 
+	email			 
+	group			 
+	key_curve "${2:prime256v1}"	 
+	key_file	 
+	key_length 
+	key_pass	 
+	key_type "${3:ec}"	 
+	mode			 
+	org				 
+	org_unit	 
+	owner			 
+	path			 
+	state			 
+	action :${4:create}		
+end

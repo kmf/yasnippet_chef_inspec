@@ -1,0 +1,7 @@
+# name: bond (InSpec)
+# key: bond
+# --
+# https://docs.chef.io/inspec/resources/bond
+	describe bond('name') do
+				it { should exist }
+			end

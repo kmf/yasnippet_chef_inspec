@@ -1,0 +1,7 @@
+# name: mount (InSpec)
+# key: mount
+# --
+# https://docs.chef.io/inspec/resources/mount
+	describe mount('path') do
+				it { should MATCHER 'value' }
+			end

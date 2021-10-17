@@ -1,0 +1,9 @@
+# name: google_bigquery_datasets (InSpec)
+# key: google_bigquery_datasets
+# --
+# https://docs.chef.io/inspec/resources/google_bigquery_datasets
+	describe google_bigquery_datasets(project: 'chef-gcp-inspec') do
+		its('count') { should be >= 1 }
+		its('friendly_names') { should include 'A BigQuery dataset test' }
+		its('locations') { should include 'EU' }
+	end

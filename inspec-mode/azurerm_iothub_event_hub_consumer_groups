@@ -1,0 +1,8 @@
+# name: azurerm_iothub_event_hub_consumer_groups (InSpec)
+# key: azurerm_iothub_event_hub_consumer_groups
+# --
+# https://docs.chef.io/inspec/resources/azurerm_iothub_event_hub_consumer_groups
+	describe azurerm_iothub_event_hub_consumer_groups(resource_group: 'my-rg', resource_name 'my-iot-hub', event_hub_endpoint: 'myeventhub') do
+				its('names') { should include "my-consumer-group"}
+				its('types') { should include 'Microsoft.Devices/IotHubs/EventHubEndpoints/ConsumerGroups' }
+			end

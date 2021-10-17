@@ -1,0 +1,7 @@
+# name: aws_iam_saml_provider (InSpec)
+# key: aws_iam_saml_provider
+# --
+# https://docs.chef.io/inspec/resources/aws_iam_saml_provider
+	describe aws_iam_saml_provider('arn:aws:iam::123456789012:saml-provider/FANCY') do
+					it { should exist }
+			end

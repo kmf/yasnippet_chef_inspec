@@ -1,0 +1,10 @@
+# name: google_kms_key_ring (InSpec)
+# key: google_kms_key_ring
+# --
+# https://docs.chef.io/inspec/resources/google_kms_key_ring
+	describe google_kms_key_ring(project: 'chef-gcp-inspec', location: 'europe-west2', name: 'kms-key-ring') do
+		it { should exist }
+		its('create_time') { should be > Time.now - 365*60*60*24*10 }
+		its('key_ring_name'){ should eq 'kms-key-ring' }
+		its('key_ring_url'){ should match 'kms-key-ring' }
+	end

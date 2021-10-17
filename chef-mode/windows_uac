@@ -1,0 +1,13 @@
+# name: windows_uac (Chef)
+# key: windows_uac
+# --
+# https://docs.chef.io/resources/windows_uac
+windows_uac '${1:name}' do
+	consent_behavior_admins				
+	consent_behavior_users				
+	detect_installers							
+	enable_uac	${2:true}									
+	prompt_on_secure_desktop	${3:true}		
+	require_signed_binaries	${4:false}			
+	action :${5:configure}									
+end

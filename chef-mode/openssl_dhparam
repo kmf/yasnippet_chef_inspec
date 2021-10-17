@@ -1,0 +1,13 @@
+# name: openssl_dhparam (Chef)
+# key: openssl_dhparam
+# --
+# https://docs.chef.io/resources/openssl_dhparam
+openssl_dhparam '${1:name}' do
+	generator			
+	group					
+	key_length		
+	mode "${2:0640}"			
+	owner					
+	path						
+	action :${3:create}			
+end

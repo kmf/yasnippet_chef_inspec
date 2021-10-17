@@ -1,0 +1,11 @@
+# name: google_bigquery_table (InSpec)
+# key: google_bigquery_table
+# --
+# https://docs.chef.io/inspec/resources/google_bigquery_table
+	describe google_bigquery_table(project: 'chef-gcp-inspec', dataset: 'inspec_gcp_dataset', name: 'inspec_gcp_bigquery_table') do
+		it { should exist }
+	
+		its('expiration_time') { should cmp '1738882264000' }
+		its('time_partitioning.type') { should eq 'DAY' }
+		its('description') { should eq 'A BigQuery table' }
+	end

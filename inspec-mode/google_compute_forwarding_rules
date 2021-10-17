@@ -1,0 +1,7 @@
+# name: google_compute_forwarding_rules (InSpec)
+# key: google_compute_forwarding_rules
+# --
+# https://docs.chef.io/inspec/resources/google_compute_forwarding_rules
+	describe google_compute_forwarding_rules(project: 'chef-gcp-inspec', region: 'europe-west2') do
+		its('forwarding_rule_names') { should include 'udp-forwarding-rule' }
+	end

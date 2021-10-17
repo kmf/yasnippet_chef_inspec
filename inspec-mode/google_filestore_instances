@@ -1,0 +1,7 @@
+# name: google_filestore_instances (InSpec)
+# key: google_filestore_instances
+# --
+# https://docs.chef.io/inspec/resources/google_filestore_instances
+	describe google_filestore_instances(project: 'chef-gcp-inspec', zone: 'us-central1-b') do
+		its('tiers') { should include 'PREMIUM' }
+	end

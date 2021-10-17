@@ -1,0 +1,9 @@
+# name: google_compute_global_forwarding_rule (InSpec)
+# key: google_compute_global_forwarding_rule
+# --
+# https://docs.chef.io/inspec/resources/google_compute_global_forwarding_rule
+	describe google_compute_global_forwarding_rule(project: 'chef-gcp-inspec', name: 'inspec-gcp-global-forwarding-rule') do
+		it { should exist }
+		its('port_range') { should eq '80-80' }
+		its('target') { should	match /\/inspec-gcp-http-proxy$/ }
+	end

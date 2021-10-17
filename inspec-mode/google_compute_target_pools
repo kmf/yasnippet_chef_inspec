@@ -1,0 +1,8 @@
+# name: google_compute_target_pools (InSpec)
+# key: google_compute_target_pools
+# --
+# https://docs.chef.io/inspec/resources/google_compute_target_pools
+	describe google_compute_target_pools(project: 'chef-gcp-inspec', region: 'europe-west2') do
+		its('names') { should include 'inspec-gcp-target-pool' }
+		its('session_affinities') { should include 'CLIENT_IP' }
+	end

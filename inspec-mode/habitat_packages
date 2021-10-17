@@ -1,0 +1,8 @@
+# name: habitat_packages (InSpec)
+# key: habitat_packages
+# --
+# https://docs.chef.io/inspec/resources/habitat_packages
+	describe habitat_packages do
+		its('names') { should include 'httpd' }
+		its('names') { should include 'memcached' }
+	end

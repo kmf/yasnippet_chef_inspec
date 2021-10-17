@@ -1,0 +1,10 @@
+# name: windows_user_privilege (Chef)
+# key: windows_user_privilege
+# --
+# https://docs.chef.io/resources/windows_user_privilege
+windows_user_privilege '${1:name}' do
+	principal 
+	privilege 
+	users		 
+	action :${2:add}				
+end

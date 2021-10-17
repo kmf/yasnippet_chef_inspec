@@ -1,0 +1,7 @@
+# name: google_pubsub_topic_iam_policy (InSpec)
+# key: google_pubsub_topic_iam_policy
+# --
+# https://docs.chef.io/inspec/resources/google_pubsub_topic_iam_policy
+	describe google_pubsub_topic_iam_policy(project: "project", name: "name") do
+		it { should exist }
+	end

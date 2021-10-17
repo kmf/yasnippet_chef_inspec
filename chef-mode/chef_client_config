@@ -1,0 +1,36 @@
+# name: chef_client_config (Chef)
+# key: chef_client_config
+# --
+# https://docs.chef.io/resources/chef_client_config
+chef_client_config '${1:name}' do
+	additional_config				 
+	chef_license						 
+	chef_server_url					 
+	config_directory				 
+	event_loggers					   
+	exception_handlers			 
+	file_backup_path				 
+	file_cache_path					 
+	file_staging_uses_destdir 
+	formatters							 
+	ftp_proxy								 
+	group										 
+	http_proxy							 
+	https_proxy							 
+	log_level							   
+	log_location						 
+	minimal_ohai						 
+	named_run_list					 
+	no_proxy								 
+	node_name								 
+	ohai_disabled_plugins		 
+	ohai_optional_plugins		 
+	pid_file								 
+	policy_group						 
+	policy_name							 
+	report_handlers					 
+	ssl_verify_mode					 
+	start_handlers					 
+	user										 
+	action :${2:create}			 
+end

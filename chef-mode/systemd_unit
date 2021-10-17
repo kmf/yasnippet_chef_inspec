@@ -1,0 +1,12 @@
+# name: systemd_unit (Chef)
+# key: systemd_unit
+# --
+# https://docs.chef.io/resources/systemd_unit
+systemd_unit '${1:name}' do
+	content				 
+	triggers_reload ${2:false}			
+	unit_name			 
+	user					 
+	verify ${3:false}				 
+	action :${4:nothing}						
+end

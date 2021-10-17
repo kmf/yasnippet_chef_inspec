@@ -1,0 +1,7 @@
+# name: aide_conf (InSpec)
+# key: aide_conf
+# --
+# https://docs.chef.io/inspec/resources/aide_conf
+	describe aide_conf('path') do
+				its('selection_lines') { should include '/sbin' }
+			end

@@ -1,0 +1,7 @@
+# name: aws_lambdas (InSpec)
+# key: aws_lambdas
+# --
+# https://docs.chef.io/inspec/resources/aws_lambdas
+	describe aws_lambdas do
+		its('count') { should eq 20 }
+	end

@@ -1,0 +1,9 @@
+# name: reboot (Chef)
+# key: reboot
+# --
+# https://docs.chef.io/resources/reboot
+reboot '${1:name}' do
+	delay_mins			
+	reason "${2:Reboot by Chef Infra Client}"					
+	action :${3:nothing}	
+end

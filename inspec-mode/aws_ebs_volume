@@ -1,0 +1,7 @@
+# name: aws_ebs_volume (InSpec)
+# key: aws_ebs_volume
+# --
+# https://docs.chef.io/inspec/resources/aws_ebs_volume
+	describe aws_ebs_volume('vol-01a2349e94458a507') do
+				it { should exist }
+			end

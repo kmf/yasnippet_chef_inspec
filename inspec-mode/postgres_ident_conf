@@ -1,0 +1,7 @@
+# name: postgres_ident_conf (InSpec)
+# key: postgres_ident_conf
+# --
+# https://docs.chef.io/inspec/resources/postgres_ident_conf
+	describe postgres_ident_conf.where { pg_username == 'filter_value' } do
+				its('attribute') { should eq ['value'] }
+			end

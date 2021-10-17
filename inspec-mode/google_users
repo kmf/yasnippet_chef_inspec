@@ -1,0 +1,7 @@
+# name: google_users (InSpec)
+# key: google_users
+# --
+# https://docs.chef.io/inspec/resources/google_users
+	describe google_users(customer: 'my_customer') do
+				it { should exist }
+			end

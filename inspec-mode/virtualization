@@ -1,0 +1,7 @@
+# name: virtualization (InSpec)
+# key: virtualization
+# --
+# https://docs.chef.io/inspec/resources/virtualization
+	describe virtualization do
+				its('system') { should MATCHER 'value' }
+			end

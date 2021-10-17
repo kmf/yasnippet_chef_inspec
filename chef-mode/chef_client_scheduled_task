@@ -1,0 +1,22 @@
+# name: chef_client_scheduled_task (Chef)
+# key: chef_client_scheduled_task
+# --
+# https://docs.chef.io/resources/chef_client_scheduled_task
+chef_client_scheduled_task '${1:name}' do
+	accept_chef_license	 ${2:false}		 
+	chef_binary_path "${3:C:/opscode/chef/bin/chef-client}"	 
+	config_directory "${4:/etc/chef}"	 
+	daemon_options		 
+	frequency "${5:minute}"					 
+	frequency_modifier "${6:30 if frequency is 'minute', 1 otherwise}" 
+	log_directory "${7:CONFIG_DIRECTORY/log}"			 
+	log_file_name "${8:client.log}"			 
+	password					 
+	run_on_battery	${9:true}	 
+	splay	${10:300}						 
+	start_date				 
+	start_time				 
+	task_name "${11:chef-client}"					 
+	user "${12:System}"							 
+	action :${13:add}						 
+end

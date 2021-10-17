@@ -1,0 +1,7 @@
+# name: grub_conf (InSpec)
+# key: grub_conf
+# --
+# https://docs.chef.io/inspec/resources/grub_conf
+	describe grub_conf('path', 'kernel') do
+				its('setting') { should eq 'value' }
+			end

@@ -1,0 +1,9 @@
+# name: users (InSpec)
+# key: users
+# --
+# https://docs.chef.io/inspec/resources/users
+	describe users.where(uid: 0).entries do
+				it { should eq ['root'] }
+				its('uids') { should eq [1234] }
+				its('gids') { should eq [1234] }
+			end

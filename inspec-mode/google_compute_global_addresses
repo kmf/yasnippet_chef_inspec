@@ -1,0 +1,9 @@
+# name: google_compute_global_addresses (InSpec)
+# key: google_compute_global_addresses
+# --
+# https://docs.chef.io/inspec/resources/google_compute_global_addresses
+	describe google_compute_global_addresses(project: 'chef-gcp-inspec', name: 'inspec-gcp-global-address') do
+		its('count') { should be >= 1 }
+		its('names') { should include 'inspec-gcp-global-address' }
+		its('ip_versions') { should include 'IPV6' }
+	end

@@ -1,0 +1,13 @@
+# name: ips_package (Chef)
+# key: ips_package
+# --
+# https://docs.chef.io/resources/ips_package
+ips_package '${1:name}' do
+	accept_license	${2:false}	
+	options							 
+	package_name				 
+	source							 
+	timeout							 
+	version							 
+	action :${3:install}				
+end

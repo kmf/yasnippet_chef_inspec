@@ -1,0 +1,11 @@
+# name: google_compute_route (InSpec)
+# key: google_compute_route
+# --
+# https://docs.chef.io/inspec/resources/google_compute_route
+	describe google_compute_route(project: 'chef-gcp-inspec', name: 'inspec-gcp-route') do
+		it { should exist }
+		its('dest_range') { should eq '15.0.0.0/24' }
+		its('network') { should match /\/gcp-inspec-network$/ }
+		its('next_hop_ip') { should eq '10.2.0.1' }
+		its('priority') { should eq '100' }
+	end

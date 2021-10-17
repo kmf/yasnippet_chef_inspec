@@ -1,0 +1,7 @@
+# name: aws_elasticache_clusters (InSpec)
+# key: aws_elasticache_clusters
+# --
+# https://docs.chef.io/inspec/resources/aws_elasticache_clusters
+	describe aws_elasticache_clusters
+				it { should exist }
+			end

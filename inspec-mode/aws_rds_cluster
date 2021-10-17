@@ -1,0 +1,7 @@
+# name: aws_rds_cluster (InSpec)
+# key: aws_rds_cluster
+# --
+# https://docs.chef.io/inspec/resources/aws_rds_cluster
+	describe aws_rds_cluster('test-cluster-id') do
+				it { should exist }
+			end

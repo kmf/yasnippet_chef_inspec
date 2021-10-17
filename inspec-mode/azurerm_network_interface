@@ -1,0 +1,7 @@
+# name: azurerm_network_interface (InSpec)
+# key: azurerm_network_interface
+# --
+# https://docs.chef.io/inspec/resources/azurerm_network_interface
+	describe azurerm_network_interface(resource_group: 'inspec-resource-group-9',name: 'example-nic-name') do
+				it { should exist }
+			end

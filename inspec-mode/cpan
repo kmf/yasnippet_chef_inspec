@@ -1,0 +1,7 @@
+# name: cpan (InSpec)
+# key: cpan
+# --
+# https://docs.chef.io/inspec/resources/cpan
+	describe cpan('package_name') do
+				it { should be_installed }
+			end

@@ -1,0 +1,10 @@
+# name: docker_service (InSpec)
+# key: docker_service
+# --
+# https://docs.chef.io/inspec/resources/docker_service
+	describe docker_service('foo') do
+				it { should exist }
+				its('id') { should eq '2ghswegspre1' }
+				its('repo') { should eq 'alpine' }
+				its('tag') { should eq 'latest' }
+			end

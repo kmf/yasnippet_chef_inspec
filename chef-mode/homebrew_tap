@@ -1,0 +1,12 @@
+# name: homebrew_tap (Chef)
+# key: homebrew_tap
+# --
+# https://docs.chef.io/resources/homebrew_tap
+homebrew_tap '${1:name}' do
+	full	 ${2:false}					
+	homebrew_path "${3:/usr/local/bin/brew}" 
+	owner				 
+	tap_name		 
+	url					 
+	action :${4:tap}		
+end

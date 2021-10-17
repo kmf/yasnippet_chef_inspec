@@ -1,0 +1,8 @@
+# name: chocolatey_feature (Chef)
+# key: chocolatey_feature
+# --
+# https://docs.chef.io/resources/chocolatey_feature
+chocolatey_feature '${1:name}' do
+	feature_name			
+	action :${2:enable}				
+end

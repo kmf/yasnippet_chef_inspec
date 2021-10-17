@@ -1,0 +1,9 @@
+# name: google_compute_target_pool (InSpec)
+# key: google_compute_target_pool
+# --
+# https://docs.chef.io/inspec/resources/google_compute_target_pool
+	describe google_compute_target_pool(project: 'chef-gcp-inspec', region: 'europe-west2', name: 'inspec-gcp-target-pool') do
+		it { should exist }
+		its('session_affinity') { should eq 'CLIENT_IP' }
+		it { should has_target_instance('gcp_ext_vm_name', 'zone') }
+	end

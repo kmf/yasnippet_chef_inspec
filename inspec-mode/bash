@@ -1,0 +1,8 @@
+# name: bash (InSpec)
+# key: bash
+# --
+# https://docs.chef.io/inspec/resources/bash
+	describe bash('command') do
+				it { should exist }
+				its('property') { should eq 'expected value' }
+			end

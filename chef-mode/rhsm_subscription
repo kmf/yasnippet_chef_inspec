@@ -1,0 +1,8 @@
+# name: rhsm_subscription (Chef)
+# key: rhsm_subscription
+# --
+# https://docs.chef.io/resources/rhsm_subscription
+rhsm_subscription '${1:name}' do
+	pool_id 
+	action :${2:attach}		
+end

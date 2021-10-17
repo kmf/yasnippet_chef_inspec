@@ -1,0 +1,7 @@
+# name: google_cloudbuild_trigger (InSpec)
+# key: google_cloudbuild_trigger
+# --
+# https://docs.chef.io/inspec/resources/google_cloudbuild_trigger
+	describe google_cloudbuild_triggers(project: 'chef-gcp-inspec') do
+		its('count') { should eq 1 }
+	end

@@ -1,0 +1,9 @@
+# name: chocolatey_config (Chef)
+# key: chocolatey_config
+# --
+# https://docs.chef.io/resources/chocolatey_config
+chocolatey_config '${1:name}' do
+	config_key			
+	value					
+	action :${2:set}	
+end

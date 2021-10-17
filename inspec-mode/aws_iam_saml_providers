@@ -1,0 +1,7 @@
+# name: aws_iam_saml_providers (InSpec)
+# key: aws_iam_saml_providers
+# --
+# https://docs.chef.io/inspec/resources/aws_iam_saml_providers
+	describe aws_iam_saml_providers do
+				it { should exist }
+			end

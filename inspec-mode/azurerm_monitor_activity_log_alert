@@ -1,0 +1,7 @@
+# name: azurerm_monitor_activity_log_alert (InSpec)
+# key: azurerm_monitor_activity_log_alert
+# --
+# https://docs.chef.io/inspec/resources/azurerm_monitor_activity_log_alert
+	describe azurerm_monitor_activity_log_alert(resource_group: 'example', name: 'AlertName') do
+				...
+			end

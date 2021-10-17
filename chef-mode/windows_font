@@ -1,0 +1,9 @@
+# name: windows_font (Chef)
+# key: windows_font
+# --
+# https://docs.chef.io/resources/windows_font
+windows_font '${1:name}' do
+	font_name 
+	source	 
+	action :${2:install}				
+end

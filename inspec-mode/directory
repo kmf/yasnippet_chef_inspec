@@ -1,0 +1,7 @@
+# name: directory (InSpec)
+# key: directory
+# --
+# https://docs.chef.io/inspec/resources/directory
+	describe directory('path') do
+				its('property') { should cmp 'value' }
+			end

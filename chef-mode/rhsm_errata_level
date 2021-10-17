@@ -1,0 +1,8 @@
+# name: rhsm_errata_level (Chef)
+# key: rhsm_errata_level
+# --
+# https://docs.chef.io/resources/rhsm_errata_level
+rhsm_errata_level '${1:name}' do
+	errata_level			
+	action :${2:install}				
+end

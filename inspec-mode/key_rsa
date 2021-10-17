@@ -1,0 +1,10 @@
+# name: key_rsa (InSpec)
+# key: key_rsa
+# --
+# https://docs.chef.io/inspec/resources/key_rsa
+	describe key_rsa('mycertificate.key') do
+				it { should be_private }
+				it { should be_public }
+				its('public_key') { should match "-----BEGIN PUBLIC KEY-----\n3597459df9f3982" }
+				its('key_length') { should eq 2048 }
+			end

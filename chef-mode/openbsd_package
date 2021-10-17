@@ -1,0 +1,12 @@
+# name: openbsd_package (Chef)
+# key: openbsd_package
+# --
+# https://docs.chef.io/resources/openbsd_package
+openbsd_package '${1:name}' do
+	options					
+	package_name		
+	source					
+	timeout					
+	version					
+	action :${2:install}		
+end

@@ -1,0 +1,9 @@
+# name: google_dns_managed_zones (InSpec)
+# key: google_dns_managed_zones
+# --
+# https://docs.chef.io/inspec/resources/google_dns_managed_zones
+	describe google_dns_managed_zones(project: 'chef-gcp-inspec') do
+		it { should exist }
+		its('zone_names') { should include 'example-zone' }
+		its('zone_dns_names') { should include 'dns-zone-name.com.' }
+	end

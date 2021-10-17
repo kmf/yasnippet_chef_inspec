@@ -1,0 +1,12 @@
+# name: google_redis_instances (InSpec)
+# key: google_redis_instances
+# --
+# https://docs.chef.io/inspec/resources/google_redis_instances
+	describe google_redis_instances(project: 'chef-gcp-inspec', region: 'us-central1') do
+		its('tiers') { should include 'STANDARD_HA' }
+		its('memory_size_gbs') { should include '1' }
+		its('alternative_location_ids') { should include 'us-central1-f' }
+		its('redis_versions') { should include 'REDIS_3_2' }
+		its('display_names') { should include 'InSpec test instance' }
+		its('reserved_ip_ranges') { should include '192.168.0.0/29' }
+	end

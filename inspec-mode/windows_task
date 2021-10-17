@@ -1,0 +1,8 @@
+# name: windows_task (InSpec)
+# key: windows_task
+# --
+# https://docs.chef.io/inspec/resources/windows_task
+	describe windows_task('task name uri') do
+				its('parameter') { should eq 'value' }
+				it { should be_enabled }
+			end

@@ -1,0 +1,9 @@
+# name: google_compute_disks (InSpec)
+# key: google_compute_disks
+# --
+# https://docs.chef.io/inspec/resources/google_compute_disks
+	describe google_compute_disks(project: 'chef-gcp-inspec', zone: 'zone') do
+		it { should exist }
+		its('names') { should include 'inspec-snapshot-disk' }
+		its('source_images') { should include most_recent_image.self_link }
+	end

@@ -1,0 +1,20 @@
+# name: chef_client_systemd_timer (Chef)
+# key: chef_client_systemd_timer
+# --
+# https://docs.chef.io/resources/chef_client_systemd_timer
+chef_client_systemd_timer '${1:name}' do
+	accept_chef_license	${2:false}		 
+	chef_binary_path "${3:/opt/chef/bin/chef-client}"	 
+	config_directory "${4:/etc/chef}"	 
+	cpu_quota					 
+	daemon_options		 
+	delay_after_boot "${5:1min}"	 
+	description "${6:Chef Infra Client periodic execution}"				 
+	environment				 
+	interval "${7:30min}"					 
+	job_name "${8:chef-client}"					 
+	run_on_battery	${9:true}	 
+	splay "${10:5min}"							 
+	user "${11:root}"							 
+	action :${12:add}						 
+end

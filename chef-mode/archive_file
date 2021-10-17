@@ -1,0 +1,14 @@
+# name: archive_file (Chef)
+# key: archive_file
+# --
+# https://docs.chef.io/resources/archive_file
+archive_file '${1:name}' do
+	destination               
+	group                     
+	mode	"'${2:755}'"        
+	options                   
+	overwrite ${3:false}      
+	owner                     
+	path                      
+	action :${4:extract}      
+end

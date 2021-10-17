@@ -1,0 +1,11 @@
+# name: windows_env (Chef)
+# key: windows_env
+# --
+# https://docs.chef.io/resources/windows_env
+windows_env '${1:name}' do
+	delim				
+	key_name			
+	user "${2:<System>}"					
+	value				
+	action :${3:create}				
+end

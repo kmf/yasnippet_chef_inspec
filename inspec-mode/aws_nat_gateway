@@ -1,0 +1,7 @@
+# name: aws_nat_gateway (InSpec)
+# key: aws_nat_gateway
+# --
+# https://docs.chef.io/inspec/resources/aws_nat_gateway
+	describe aws_nat_gateway(id: 'nat-abc0123456789deff') do
+				it { should exist }
+			end

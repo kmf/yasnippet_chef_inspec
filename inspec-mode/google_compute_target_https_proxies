@@ -1,0 +1,8 @@
+# name: google_compute_target_https_proxies (InSpec)
+# key: google_compute_target_https_proxies
+# --
+# https://docs.chef.io/inspec/resources/google_compute_target_https_proxies
+	describe google_compute_target_https_proxies(project: 'chef-gcp-inspec') do
+		its('names') { should include 'inspec-gcp-https-proxy' }
+		its('descriptions') { should include 'A HTTPS target proxy' }
+	end

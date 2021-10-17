@@ -1,0 +1,7 @@
+# name: iptables (InSpec)
+# key: iptables
+# --
+# https://docs.chef.io/inspec/resources/iptables
+	describe iptables(rule:'name', table:'name', chain: 'name') do
+				it { should have_rule('RULE') }
+			end

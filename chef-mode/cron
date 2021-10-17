@@ -1,0 +1,21 @@
+# name: cron (Chef)
+# key: cron
+# --
+# https://docs.chef.io/resources/cron
+cron '${1:name}' do
+	command "${3:ls -la}"		
+	day "${4:*}"						
+	environment			
+	home						
+	hour "${5:*}"				
+	mailto		 
+	minute "${6:*}"		
+	month "${7:*}"		
+	path			 
+	shell			 
+	time			 
+	time_out	 
+	user "${8:root}"			 
+	weekday		 
+	action :${9:create}			
+end

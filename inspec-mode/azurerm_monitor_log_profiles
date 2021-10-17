@@ -1,0 +1,7 @@
+# name: azurerm_monitor_log_profiles (InSpec)
+# key: azurerm_monitor_log_profiles
+# --
+# https://docs.chef.io/inspec/resources/azurerm_monitor_log_profiles
+	describe azurerm_monitor_log_profiles do
+				...
+			end

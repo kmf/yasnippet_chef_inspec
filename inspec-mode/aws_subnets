@@ -1,0 +1,8 @@
+# name: aws_subnets (InSpec)
+# key: aws_subnets
+# --
+# https://docs.chef.io/inspec/resources/aws_subnets
+	describe aws_subnets.where(vpc_id: 'vpc-12345678') do
+				its('subnet_ids') { should include 'subnet-12345678' }
+				its('subnet_ids') { should include 'subnet-98765432' }
+			end

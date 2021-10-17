@@ -1,0 +1,19 @@
+# name: subversion (Chef)
+# key: subversion
+# --
+# https://docs.chef.io/resources/subversion
+subversion '${1:name}' do
+	destination	 
+	environment	 
+	group				 
+	repository	 
+	revision "${2:HEAD}"		 
+	svn_arguments 
+	svn_binary	 
+	svn_info_args 
+	svn_password 
+	svn_username 
+	timeout			 
+	user				 
+	action :${3:sync}		
+end

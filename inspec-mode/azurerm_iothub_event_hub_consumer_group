@@ -1,0 +1,7 @@
+# name: azurerm_iothub_event_hub_consumer_group (InSpec)
+# key: azurerm_iothub_event_hub_consumer_group
+# --
+# https://docs.chef.io/inspec/resources/azurerm_iothub_event_hub_consumer_group
+	describe azurerm_iothub_event_hub_consumer_group(resource_group: 'my-rg', resource_name 'my-iot-hub', event_hub_endpoint: 'myeventhub', consumer_group: 'my-consumer-group') do
+				it { should exist }
+			end

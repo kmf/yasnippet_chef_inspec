@@ -1,0 +1,8 @@
+# name: google_compute_snapshot (InSpec)
+# key: google_compute_snapshot
+# --
+# https://docs.chef.io/inspec/resources/google_compute_snapshot
+	describe google_compute_snapshot(project: 'chef-gcp-inspec', name: 'inspec-gcp-disk-snapshot') do
+		it { should exist }
+		its('source_disk') { should match 'inspec-snapshot-disk' }
+	end

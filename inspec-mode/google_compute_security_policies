@@ -1,0 +1,8 @@
+# name: google_compute_security_policies (InSpec)
+# key: google_compute_security_policies
+# --
+# https://docs.chef.io/inspec/resources/google_compute_security_policies
+	describe google_compute_security_policies(project: 'chef-gcp-inspec') do
+		its('count') { should be >= 1 }
+		its('names') { should include 'sec-policy' }
+	end

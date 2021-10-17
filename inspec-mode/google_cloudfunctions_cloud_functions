@@ -1,0 +1,8 @@
+# name: google_cloudfunctions_cloud_functions (InSpec)
+# key: google_cloudfunctions_cloud_functions
+# --
+# https://docs.chef.io/inspec/resources/google_cloudfunctions_cloud_functions
+	describe google_cloudfunctions_cloud_functions(project: 'chef-gcp-inspec', location: 'europe-west1') do
+		its('descriptions') { should include 'A description of the function' }
+		its('entry_points') { should include 'hello' }
+	end

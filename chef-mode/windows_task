@@ -1,0 +1,31 @@
+# name: windows_task (Chef)
+# key: windows_task
+# --
+# https://docs.chef.io/resources/windows_task
+windows_task '${1:name}' do
+	command "${3:ls -la}"														
+	cwd																
+	day																
+	description												
+	disallow_start_if_on_batteries ${4:false}			
+	execution_time_limit							
+	force	${5:false}															
+	frequency														
+	frequency_modifier									
+	idle_time														
+	interactive_enabled ${5:false}				
+	minutes_duration									
+	minutes_interval									
+	months														
+	password													
+	priority														
+	random_delay											
+	run_level														
+	start_day														
+	start_time												
+	start_when_available ${6:false}					
+	stop_if_going_on_batteries ${7:false}		
+	task_name														
+	user																
+	action :${3:create}											
+end

@@ -1,0 +1,7 @@
+# name: aws_db_subnet_group (InSpec)
+# key: aws_db_subnet_group
+# --
+# https://docs.chef.io/inspec/resources/aws_db_subnet_group
+	describe aws_db_subnet_group(db_subnet_group_name: 'subnet-group-name-12345') do
+				it { should exist }
+			end

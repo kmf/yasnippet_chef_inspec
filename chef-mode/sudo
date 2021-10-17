@@ -1,0 +1,24 @@
+# name: sudo (Chef)
+# key: sudo
+# --
+# https://docs.chef.io/resources/sudo
+sudo '${1:name}' do
+	command_aliases "${2:[ls -la]}"	  
+	commands "${3:["ALL]}"				  
+	config_prefix "${4:Prefix values based on the node's platform}"		 
+	defaults				  
+	env_keep_add		  
+	env_keep_subtract  
+	filename				 
+	groups					 
+	host "${5:ALL}"						 
+	noexec	${6:false}				  
+	nopasswd ${7:false}				  
+	runas "${9:ALL}"						 
+	setenv	${10:false}				  
+	template				 
+	users						 
+	variables				 
+	visudo_binary "${11:/usr/sbin/visudo}"		 
+	action :${12:create}					  
+end

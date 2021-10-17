@@ -1,0 +1,7 @@
+# name: audit_policy (InSpec)
+# key: audit_policy
+# --
+# https://docs.chef.io/inspec/resources/audit_policy
+	describe audit_policy do
+				its('parameter') { should eq 'value' }
+			end
