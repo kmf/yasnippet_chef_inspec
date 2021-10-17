@@ -1,0 +1,25 @@
+# name: powershell_script (Chef)
+# key: powershell_script
+# --
+# https://docs.chef.io/resources/powershell_script
+powershell_script '${1:name}' do
+	code											
+	command "${2:ls -la}"										
+	convert_boolean_return ${3:false}		
+	creates										
+	cwd												
+	domain										
+	elevated ${4:false}					
+	environment									
+	flags											
+	group											
+	input											
+	interpreter "${5:powershell}"									
+	live_stream	${6:false}				
+	password									
+	returns										
+	sensitive									
+	timeout										
+	user											
+	action :${7:run}					
+end

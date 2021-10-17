@@ -1,0 +1,12 @@
+# name: sysctl (Chef)
+# key: sysctl
+# --
+# https://docs.chef.io/resources/sysctl
+sysctl '${1:name}' do
+	comment						
+	conf_dir "${2:/etc/sysctl.d}"					
+	ignore_error ${3:false}			
+	key								
+	value							
+	action :${4:apply}	
+end

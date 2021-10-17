@@ -1,0 +1,11 @@
+# name: alternatives (Chef)
+# key: alternatives
+# --
+# https://docs.chef.io/resources/alternatives
+alternatives '${1:name}' do
+	link "${_:/usr/bin/LINK_NAME}" 
+	link_name                 
+	path '${2:path}'         
+	priority	                     
+	action :${3:install}	   
+end

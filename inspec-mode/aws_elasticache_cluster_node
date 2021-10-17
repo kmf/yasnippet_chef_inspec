@@ -1,0 +1,7 @@
+# name: aws_elasticache_cluster_node (InSpec)
+# key: aws_elasticache_cluster_node
+# --
+# https://docs.chef.io/inspec/resources/aws_elasticache_cluster_node
+	describe aws_elasticache_cluster_node(cache_cluster_id: 'my-cluster-123', node_id: '0001') do
+				it { should exist }
+			end

@@ -1,0 +1,7 @@
+# name: powershell (InSpec)
+# key: powershell
+# --
+# https://docs.chef.io/inspec/resources/powershell
+	describe powershell(script) do
+				its('property') { should eq 'output' }
+			end

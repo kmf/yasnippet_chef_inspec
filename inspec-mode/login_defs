@@ -1,0 +1,7 @@
+# name: login_defs (InSpec)
+# key: login_defs
+# --
+# https://docs.chef.io/inspec/resources/login_defs
+	describe login_defs do
+				its('name') { should include('foo') }
+			end

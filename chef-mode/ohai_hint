@@ -1,0 +1,10 @@
+# name: ohai_hint (Chef)
+# key: ohai_hint
+# --
+# https://docs.chef.io/resources/ohai_hint
+ohai_hint '${1:name}' do
+	compile_time	${2:true} 		
+	content					
+	hint_name					
+	action :${3:create}					
+end

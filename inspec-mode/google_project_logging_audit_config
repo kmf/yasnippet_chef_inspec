@@ -1,0 +1,7 @@
+# name: google_project_logging_audit_config (InSpec)
+# key: google_project_logging_audit_config
+# --
+# https://docs.chef.io/inspec/resources/google_project_logging_audit_config
+	describe google_project_logging_audit_config(project: 'chef-inspec-gcp') do
+				it { should exist }
+			end

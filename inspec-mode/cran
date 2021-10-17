@@ -1,0 +1,7 @@
+# name: cran (InSpec)
+# key: cran
+# --
+# https://docs.chef.io/inspec/resources/cran
+	describe cran('package_name') do
+				it { should be_installed }
+			end

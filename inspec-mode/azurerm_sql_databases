@@ -1,0 +1,7 @@
+# name: azurerm_sql_databases (InSpec)
+# key: azurerm_sql_databases
+# --
+# https://docs.chef.io/inspec/resources/azurerm_sql_databases
+	describe azurerm_sql_databases(resource_group: ..., server_name: ...) do
+				...
+			end

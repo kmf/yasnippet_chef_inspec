@@ -1,0 +1,7 @@
+# name: aws_albs (InSpec)
+# key: aws_albs
+# --
+# https://docs.chef.io/inspec/resources/aws_albs
+	describe aws_albs do
+				its('load_balancer_arns') { should include 'arn:aws:elasticloadbalancing' }
+			end

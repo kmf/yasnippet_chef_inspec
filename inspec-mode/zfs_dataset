@@ -1,0 +1,7 @@
+# name: zfs_dataset (InSpec)
+# key: zfs_dataset
+# --
+# https://docs.chef.io/inspec/resources/zfs_dataset
+	describe zfs_dataset('dataset') do
+				it { should MATCHER 'value' }
+			end

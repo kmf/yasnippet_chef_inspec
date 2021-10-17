@@ -1,0 +1,13 @@
+# name: google_dataproc_cluster (InSpec)
+# key: google_dataproc_cluster
+# --
+# https://docs.chef.io/inspec/resources/google_dataproc_cluster
+	describe google_dataproc_cluster(project: 'chef-gcp-inspec', region: 'europe-west2', cluster_name: 'inspec-dataproc-cluster') do
+		it { should exist }
+		its('labels') { should include('label' => 'value') }
+		its('config.master_config.num_instances') { should cmp '1' }
+		its('config.worker_config.num_instances') { should cmp '2' }
+		its('config.master_config.machine_type_uri') { should match 'n1-standard-1' }
+		its('config.worker_config.machine_type_uri') { should match 'n1-standard-1' }
+		its('config.software_config.properties') { should include('dataproc:dataproc.allow.zero.workers' => 'true') }
+	end

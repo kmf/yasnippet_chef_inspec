@@ -1,0 +1,7 @@
+# name: aws_auto_scaling_groups (InSpec)
+# key: aws_auto_scaling_groups
+# --
+# https://docs.chef.io/inspec/resources/aws_auto_scaling_groups
+	describe aws_auto_scaling_groups do
+				its('names') { should include 'group-name' }
+			end

@@ -1,0 +1,13 @@
+# name: dh_params (InSpec)
+# key: dh_params
+# --
+# https://docs.chef.io/inspec/resources/dh_params
+	describe dh_params('/path/to/file.dh_pem') do
+				it { should be_dh_params }
+				it { should be_valid }
+				its('generator') { should eq 2 }
+				its('modulus') { should eq '00:91:a0:15:89:e5:bc:38:93:12:02:fc:...' }
+				its('prime_length') { should eq 2048 }
+				its('pem') { should eq '-----BEGIN DH PARAMETERS...' }
+				its('text') { should eq 'PKCS#3 DH Parameters: (2048 bit)...' }
+			end

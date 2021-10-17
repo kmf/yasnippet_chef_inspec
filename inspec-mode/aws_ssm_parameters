@@ -1,0 +1,7 @@
+# name: aws_ssm_parameters (InSpec)
+# key: aws_ssm_parameters
+# --
+# https://docs.chef.io/inspec/resources/aws_ssm_parameters
+	describe aws_ssm_parameters do
+				its('names.count') { should cmp 3 }
+			end

@@ -1,0 +1,7 @@
+# name: aws_subnet (InSpec)
+# key: aws_subnet
+# --
+# https://docs.chef.io/inspec/resources/aws_subnet
+	describe aws_subnet(subnet_id: 'subnet-1234567') do
+				it { should exist }
+			end

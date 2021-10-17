@@ -1,0 +1,14 @@
+# name: route (Chef)
+# key: route
+# --
+# https://docs.chef.io/resources/route
+route '${1:name}' do
+	comment				
+	device				
+	gateway				
+	metric				
+	netmask				
+	route_type		
+	target					
+	action :${2:add}			
+end

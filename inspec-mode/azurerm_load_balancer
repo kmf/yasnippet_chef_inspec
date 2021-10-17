@@ -1,0 +1,7 @@
+# name: azurerm_load_balancer (InSpec)
+# key: azurerm_load_balancer
+# --
+# https://docs.chef.io/inspec/resources/azurerm_load_balancer
+	describe azurerm_load_balancer(resource_group: 'inspec-resource-group-9', loadbalancer_name: 'example_lb') do
+				it { should exist }
+			end

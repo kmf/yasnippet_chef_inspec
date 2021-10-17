@@ -1,0 +1,21 @@
+# name: user (InSpec)
+# key: user
+# --
+# https://docs.chef.io/inspec/resources/user
+	describe user('root') do
+				it { should exist }
+				its('uid') { should eq 1234 }
+				its('gid') { should eq 1234 }
+				its('group') { should eq 'root' }
+				its('groups') { should eq ['root', 'other']}
+				its('home') { should eq '/root' }
+				its('shell') { should eq '/bin/bash' }
+				its('mindays') { should eq 0 }
+				its('maxdays') { should eq 90 }
+				its('warndays') { should eq 8 }
+				its('passwordage') { should eq 355 }
+				its('maxbadpasswords') { should eq nil } // Only valid on Windows OS
+				its('badpasswordattempts') { should eq 0 }
+				its('lastlogin') { should eq nil } // Only valid on Windows OS
+			end
+

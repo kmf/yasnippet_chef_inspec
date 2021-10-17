@@ -1,0 +1,11 @@
+# name: google_storage_bucket_object (InSpec)
+# key: google_storage_bucket_object
+# --
+# https://docs.chef.io/inspec/resources/google_storage_bucket_object
+	describe google_storage_bucket_object(bucket: 'bucket-with-object', object: 'image1') do
+		it { should exist }
+		its('size.to_i') { should be > 0 }
+	
+		its('time_created') { should be > Time.now - 60*60*24*10 }
+		its('time_updated') { should be > Time.now - 60*60*24*10 }
+	end

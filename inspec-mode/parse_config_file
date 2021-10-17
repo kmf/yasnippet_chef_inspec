@@ -1,0 +1,7 @@
+# name: parse_config_file (InSpec)
+# key: parse_config_file
+# --
+# https://docs.chef.io/inspec/resources/parse_config_file
+	describe parse_config_file('/path/to/file', { data_config_option: value } ) do
+				its('setting') { should eq 1 }
+			end

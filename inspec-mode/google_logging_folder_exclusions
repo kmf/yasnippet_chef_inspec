@@ -1,0 +1,12 @@
+# name: google_logging_folder_exclusions (InSpec)
+# key: google_logging_folder_exclusions
+# --
+# https://docs.chef.io/inspec/resources/google_logging_folder_exclusions
+	describe.one do
+		google_resourcemanager_folders(parent: 'organizations/12345').names.each do |name|
+			# name on a folder is in the form 
+			describe google_logging_folder_exclusions(folder: name.split('/')[1]) do
+				its('names'){ should include 'inspec-folder-exclusion' }
+				its('descriptions'){ should include 'My folder exclusion description' }
+				its('filters'){ should include 'resource.type = gce_instance AND severity <= DEBUG' }
+			end

@@ -1,0 +1,7 @@
+# name: aws_region (InSpec)
+# key: aws_region
+# --
+# https://docs.chef.io/inspec/resources/aws_region
+	describe aws_region('eu-west-2') do
+				it { should exist }
+			end

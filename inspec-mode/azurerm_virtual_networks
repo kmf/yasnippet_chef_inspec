@@ -1,0 +1,7 @@
+# name: azurerm_virtual_networks (InSpec)
+# key: azurerm_virtual_networks
+# --
+# https://docs.chef.io/inspec/resources/azurerm_virtual_networks
+	describe azurerm_virtual_networks(resource_group: 'MyResourceGroup') do
+				...
+			end

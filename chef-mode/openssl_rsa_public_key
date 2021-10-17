@@ -1,0 +1,14 @@
+# name: openssl_rsa_public_key (Chef)
+# key: openssl_rsa_public_key
+# --
+# https://docs.chef.io/resources/openssl_rsa_public_key
+openssl_rsa_public_key '${1:name}' do
+	group							 
+	mode "${2:0640}"					
+	owner							 
+	path							 
+	private_key_content 
+	private_key_pass	 
+	private_key_path	 
+	action :${3:create}				
+end

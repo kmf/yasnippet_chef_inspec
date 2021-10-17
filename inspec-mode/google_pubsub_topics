@@ -1,0 +1,9 @@
+# name: google_pubsub_topics (InSpec)
+# key: google_pubsub_topics
+# --
+# https://docs.chef.io/inspec/resources/google_pubsub_topics
+	describe google_pubsub_topics(project: 'chef-gcp-inspec') do
+		it { should exist }
+		its('names') { should include 'inspec-gcp-topic' }
+		its('count') { should be >=1 }
+	end

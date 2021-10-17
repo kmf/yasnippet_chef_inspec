@@ -1,0 +1,10 @@
+# name: docker_plugin (InSpec)
+# key: docker_plugin
+# --
+# https://docs.chef.io/inspec/resources/docker_plugin
+	describe docker_plugin('rexray/ebs') do
+				it { should exist }
+				its('id') { should_not eq '0ac30b93ad40' }
+				its('version') { should eq '0.11.1' }
+				it { should be_enabled }
+			end

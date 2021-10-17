@@ -1,0 +1,7 @@
+# name: aws_alb (InSpec)
+# key: aws_alb
+# --
+# https://docs.chef.io/inspec/resources/aws_alb
+	describe aws_alb('arn:aws:elasticloadbalancing') do
+				it { should exist }
+			end

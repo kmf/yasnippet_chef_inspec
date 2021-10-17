@@ -1,0 +1,8 @@
+# name: google_compute_node_template (InSpec)
+# key: google_compute_node_template
+# --
+# https://docs.chef.io/inspec/resources/google_compute_node_template
+	describe google_compute_node_template(project: 'chef-gcp-inspec', region: 'europe-west2', name: 'inspec-node-template') do
+		it { should exist }
+		its('node_affinity_labels') { should include('key' => 'value') }
+	end

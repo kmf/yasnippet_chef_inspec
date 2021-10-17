@@ -1,0 +1,7 @@
+# name: ini (InSpec)
+# key: ini
+# --
+# https://docs.chef.io/inspec/resources/ini
+	describe ini('path') do
+				its('setting_name') { should eq 'value' }
+			end

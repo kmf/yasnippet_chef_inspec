@@ -1,0 +1,9 @@
+# name: google_sourcerepo_repositories (InSpec)
+# key: google_sourcerepo_repositories
+# --
+# https://docs.chef.io/inspec/resources/google_sourcerepo_repositories
+	describe.one do
+		google_sourcerepo_repositories(project: 'chef-gcp-inspec').names.each do |name|
+			describe name do
+				it { should match /\/repos\/#{repo_name}$/ }
+			end

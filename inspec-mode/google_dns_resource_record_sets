@@ -1,0 +1,11 @@
+# name: google_dns_resource_record_sets (InSpec)
+# key: google_dns_resource_record_sets
+# --
+# https://docs.chef.io/inspec/resources/google_dns_resource_record_sets
+	describe google_dns_resource_record_sets(project: 'chef-gcp-inspec', name: 'backend.my.domain.com.', managed_zone: 'inspec-gcp-managed-zone') do
+		its('count') { should eq 3 }
+		its('types') { should include 'A' }
+		its('ttls') { should include '300' }
+		its('targets.flatten') { should include '8.8.8.8' }
+		its('targets.flatten') { should include '8.8.4.4' }
+	end

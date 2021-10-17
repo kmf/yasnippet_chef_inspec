@@ -1,0 +1,12 @@
+# name: google_compute_forwarding_rule (InSpec)
+# key: google_compute_forwarding_rule
+# --
+# https://docs.chef.io/inspec/resources/google_compute_forwarding_rule
+	describe google_compute_forwarding_rule(project: 'chef-gcp-inspec', region: 'europe-west2', name: 'udp-forwarding-rule') do
+		it { should exist }
+		its('region') { should match 'europe-west2' }
+		its('creation_timestamp') { should be > Time.now - 365*60*60*24*10 }
+		its('load_balancing_scheme') { should match 'EXTERNAL' }
+		its('port_range') { should match "500-500" }
+		its('ip_protocol') { should match "UDP" }
+	end

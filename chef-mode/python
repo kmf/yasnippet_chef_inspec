@@ -1,0 +1,25 @@
+# name: python (Chef)
+# key: python
+# --
+# https://docs.chef.io/resources/python
+python '${1:name}' do
+	code			 
+	command "${2:ls -la}"		 
+	creates		 
+	cwd				 
+	default_env	${3:false}		  
+	domain		 
+	elevated ${4:false}	  
+	environment 
+	flags			 
+	group			 
+	interpreter 
+	live_stream ${5:false}  
+	password	 
+	returns		 
+	sensitive ${6:false}	  
+	timeout		 
+	umask			 
+	user			 
+	action :${7:run}		  
+end

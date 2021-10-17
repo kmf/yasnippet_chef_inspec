@@ -1,0 +1,11 @@
+# name: google_storage_default_object_acl (InSpec)
+# key: google_storage_default_object_acl
+# --
+# https://docs.chef.io/inspec/resources/google_storage_default_object_acl
+	describe google_storage_default_object_acl(bucket: 'gcp-inspec-storage-bucket', entity: user-email) do
+		it { should exist }
+		its('role') { should cmp "OWNER" }
+	
+		its('bucket') { should eq 'gcp-inspec-storage-bucket' }
+		its('email') { should include entity-email.com }
+	end

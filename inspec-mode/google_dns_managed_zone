@@ -1,0 +1,12 @@
+# name: google_dns_managed_zone (InSpec)
+# key: google_dns_managed_zone
+# --
+# https://docs.chef.io/inspec/resources/google_dns_managed_zone
+	describe google_dns_managed_zone(project: 'chef-gcp-inspec', zone: 'example-zone') do
+		it { should exist }
+		its('dns_name') { should cmp 'dns-zone-name.com.' }
+	
+		its('description') { should cmp 'example description' }
+		its('zone_signing_key_algorithm') { should cmp 'rsasha256' }
+		its('key_signing_key_algorithm') { should cmp 'rsasha512' }
+	end

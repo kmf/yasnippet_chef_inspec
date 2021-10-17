@@ -1,0 +1,7 @@
+# name: azurerm_role_definition (InSpec)
+# key: azurerm_role_definition
+# --
+# https://docs.chef.io/inspec/resources/azurerm_role_definition
+	describe azurerm_role_definition(name: 'some-custom-role-name') do
+				...
+			end

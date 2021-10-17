@@ -1,0 +1,8 @@
+# name: google_project_service (InSpec)
+# key: google_project_service
+# --
+# https://docs.chef.io/inspec/resources/google_project_service
+	describe google_project_service(project: 'chef-gcp-inspec', name: 'maps-android-backend.googleapis.com') do
+		it { should exist }
+		its('state') { should cmp "ENABLED" }
+	end

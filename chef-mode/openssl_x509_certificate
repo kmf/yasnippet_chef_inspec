@@ -1,0 +1,31 @@
+# name: openssl_x509_certificate (Chef)
+# key: openssl_x509_certificate
+# --
+# https://docs.chef.io/resources/openssl_x509_certificate
+openssl_x509_certificate '${1:name}' do
+	ca_cert_file			 
+	ca_key_file				 
+	ca_key_pass				 
+	city							 
+	common_name				 
+	country						 
+	csr_file					 
+	email							 
+	expire						 
+	extensions				 
+	group							 
+	key_curve "${2:prime256v1}"					 
+	key_file					 
+	key_length				 
+	key_pass					 
+	key_type "${3:rsa}"					 
+	mode							 
+	org								 
+	org_unit					 
+	owner							 
+	path							 
+	renew_before_expiry 
+	state							 
+	subject_alt_name	 
+	action :${4:create}				
+end

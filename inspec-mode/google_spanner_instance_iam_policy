@@ -1,0 +1,7 @@
+# name: google_spanner_instance_iam_policy (InSpec)
+# key: google_spanner_instance_iam_policy
+# --
+# https://docs.chef.io/inspec/resources/google_spanner_instance_iam_policy
+	describe google_spanner_instance_iam_policy(project: "project", name: "name") do
+		it { should exist }
+	end

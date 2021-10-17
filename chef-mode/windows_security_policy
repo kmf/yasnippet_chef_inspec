@@ -1,0 +1,9 @@
+# name: windows_security_policy (Chef)
+# key: windows_security_policy
+# --
+# https://docs.chef.io/resources/windows_security_policy
+windows_security_policy '${1:name}' do
+	secoption 
+	secvalue 
+	action :${2:set}				
+end

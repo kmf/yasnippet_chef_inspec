@@ -1,0 +1,7 @@
+# name: google_pubsub_subscriptions (InSpec)
+# key: google_pubsub_subscriptions
+# --
+# https://docs.chef.io/inspec/resources/google_pubsub_subscriptions
+	describe google_pubsub_subscriptions(project: 'chef-gcp-inspec') do
+		its('count') { should be >= 1 }
+	end

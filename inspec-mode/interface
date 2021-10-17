@@ -1,0 +1,10 @@
+# name: interface (InSpec)
+# key: interface
+# --
+# https://docs.chef.io/inspec/resources/interface
+	describe interface('eth0') do
+				it { should be_up }
+				its('speed') { should eq 1000 }
+				its('name') { should eq eth0 }
+				its('ipv4_addresses') { should include '10.0.0.5' }
+			end

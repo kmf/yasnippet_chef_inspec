@@ -1,0 +1,7 @@
+# name: azurerm_security_center_policy (InSpec)
+# key: azurerm_security_center_policy
+# --
+# https://docs.chef.io/inspec/resources/azurerm_security_center_policy
+	describe azurerm_security_center_policy(name: 'default') do
+				...
+			end

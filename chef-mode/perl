@@ -1,0 +1,20 @@
+# name: perl (Chef)
+# key: perl
+# --
+# https://docs.chef.io/resources/perl
+perl '${1:name}' do
+	code								 
+	creates							 
+	cwd									 
+	environment								
+	flags								 
+	group								 
+	notifies						 
+	path											
+	returns										
+	subscribes								
+	timeout										
+	user								 
+	umask								 
+	action :${2:run}						
+end

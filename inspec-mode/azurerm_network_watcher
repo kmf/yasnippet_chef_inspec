@@ -1,0 +1,7 @@
+# name: azurerm_network_watcher (InSpec)
+# key: azurerm_network_watcher
+# --
+# https://docs.chef.io/inspec/resources/azurerm_network_watcher
+	describe azurerm_network_watcher(resource_group: 'example', name: 'WatcherName') do
+				...
+			end

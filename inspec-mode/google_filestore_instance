@@ -1,0 +1,14 @@
+# name: google_filestore_instance (InSpec)
+# key: google_filestore_instance
+# --
+# https://docs.chef.io/inspec/resources/google_filestore_instance
+	describe google_filestore_instance(project: 'chef-gcp-inspec', zone: 'us-central1-b', name: 'inspecgcp') do
+		it { should exist }
+		its('tier') { should cmp 'PREMIUM' }
+		its('file_shares.count') { should cmp 1 }
+		its('file_shares.first.capacity_gb') { should cmp '2660' }
+		its('file_shares.first.name') { should cmp 'inspecgcp' }
+		its('networks.count') { should cmp 1 }
+		its('networks.first.network') { should cmp 'default' }
+		its('networks.first.modes') { should include 'MODE_IPV4' }
+	end

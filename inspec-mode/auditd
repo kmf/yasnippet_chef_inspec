@@ -1,0 +1,7 @@
+# name: auditd (InSpec)
+# key: auditd
+# --
+# https://docs.chef.io/inspec/resources/auditd
+	describe auditd do
+				its('lines') { should include %r(-w /etc/ssh/sshd_config) }
+			end

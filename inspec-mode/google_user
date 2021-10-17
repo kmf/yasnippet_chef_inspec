@@ -1,0 +1,7 @@
+# name: google_user (InSpec)
+# key: google_user
+# --
+# https://docs.chef.io/inspec/resources/google_user
+	describe google_user(user_key: 'principal_email_address@domain.com') do
+				it { should exist }
+			end

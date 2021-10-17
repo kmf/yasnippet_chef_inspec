@@ -1,0 +1,7 @@
+# name: aws_ssm_parameter (InSpec)
+# key: aws_ssm_parameter
+# --
+# https://docs.chef.io/inspec/resources/aws_ssm_parameter
+	describe aws_ssm_parameter(name: 'ssm-parameter-name-1234') do
+				it { should exist }
+			end

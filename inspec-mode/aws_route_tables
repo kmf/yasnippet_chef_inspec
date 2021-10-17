@@ -1,0 +1,7 @@
+# name: aws_route_tables (InSpec)
+# key: aws_route_tables
+# --
+# https://docs.chef.io/inspec/resources/aws_route_tables
+	describe aws_route_tables do
+				it { should exist }
+			end

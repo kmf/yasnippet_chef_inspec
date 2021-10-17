@@ -1,0 +1,16 @@
+# name: chocolatey_package (Chef)
+# key: chocolatey_package
+# --
+# https://docs.chef.io/resources/chocolatey_package
+chocolatey_package '${1:name}' do
+	list_options		
+	options					
+	package_name		
+	password				
+	returns						
+	source					
+	timeout					
+	user						
+	version					
+	action :${2:install}			 
+end

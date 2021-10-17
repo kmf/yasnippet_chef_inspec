@@ -1,0 +1,8 @@
+# name: google_compute_image (InSpec)
+# key: google_compute_image
+# --
+# https://docs.chef.io/inspec/resources/google_compute_image
+	describe google_compute_image(project: 'chef-gcp-inspec', name: 'inspec-image') do
+		it { should exist }
+		its('disk_size_gb') { should cmp 3 }
+	end

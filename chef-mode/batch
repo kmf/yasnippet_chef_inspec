@@ -1,0 +1,21 @@
+# name: batch (Chef)
+# key: batch
+# --
+# https://docs.chef.io/resources/batch
+batch '${1:name}' do
+	architecture				 
+	code								 
+	command "${2:ls -la}" 
+	creates							 
+	cwd									 
+	flags								 
+	group								 
+	guard_interpreter		 
+	interpreter					 
+	returns							 
+	timeout							 
+	user								 
+	password						 
+	domain							 
+	action :${3:run}					
+end

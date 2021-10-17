@@ -1,0 +1,10 @@
+# name: aws_lambda (InSpec)
+# key: aws_lambda
+# --
+# https://docs.chef.io/inspec/resources/aws_lambda
+	describe aws_lambda do
+		it { should exist}
+		its ('handler') { should eq 'main.on_event'}
+		its ('version') { should eq '$LATEST' }
+		its ('runtime') { should eq 'python3.7' }
+	end

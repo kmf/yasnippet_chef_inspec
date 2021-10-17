@@ -1,0 +1,16 @@
+# name: yum_package (Chef)
+# key: yum_package
+# --
+# https://docs.chef.io/resources/yum_package
+yum_package '${1:name}' do
+	allow_downgrade	${2:true}		
+	arch					 
+	flush_cache		 
+	options				 
+	package_name	 
+	source				 
+	timeout				 
+	version				 
+	yum_binary		 
+	action :${3:install}	
+end

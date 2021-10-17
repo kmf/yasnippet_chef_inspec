@@ -1,0 +1,7 @@
+# name: aws_elb (InSpec)
+# key: aws_elb
+# --
+# https://docs.chef.io/inspec/resources/aws_elb
+	describe aws_elb('my-elb') do
+				it { should exist }
+			end

@@ -1,0 +1,10 @@
+# name: google_compute_backend_bucket (InSpec)
+# key: google_compute_backend_bucket
+# --
+# https://docs.chef.io/inspec/resources/google_compute_backend_bucket
+	describe google_compute_backend_bucket(project: 'chef-gcp-inspec', name: 'inspec-gcp-backend-bucket') do
+		it { should exist }
+		its('description') { should eq 'Backend bucket example' }
+		its('enable_cdn') { should be 'true' }
+		its('bucket_name') { should eq 'gcp-inspec-storage-bucket' }
+	end

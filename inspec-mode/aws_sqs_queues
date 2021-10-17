@@ -1,0 +1,7 @@
+# name: aws_sqs_queues (InSpec)
+# key: aws_sqs_queues
+# --
+# https://docs.chef.io/inspec/resources/aws_sqs_queues
+	describe aws_sqs_queues() do
+				it { should exist }
+			end

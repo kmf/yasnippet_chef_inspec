@@ -1,0 +1,7 @@
+# name: aws_sns_topic (InSpec)
+# key: aws_sns_topic
+# --
+# https://docs.chef.io/inspec/resources/aws_sns_topic
+	describe aws_sns_topic('arn:aws:sns:*::my-topic-name') do
+				it { should exist }
+			end

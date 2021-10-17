@@ -1,0 +1,7 @@
+# name: aws_rds_instances (InSpec)
+# key: aws_rds_instances
+# --
+# https://docs.chef.io/inspec/resources/aws_rds_instances
+	describe aws_rds_instances do
+				its('db_instance_identifiers.count') { should cmp 3 }
+			end

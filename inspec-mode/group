@@ -1,0 +1,9 @@
+# name: group (InSpec)
+# key: group
+# --
+# https://docs.chef.io/inspec/resources/group
+	describe group('group_name') do
+				it { should exist }
+				its('gid') { should eq 0 }
+			end
+

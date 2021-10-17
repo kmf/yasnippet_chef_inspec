@@ -1,0 +1,11 @@
+# name: apt_preference (Chef)
+# key: apt_preference
+# --
+# https://docs.chef.io/resources/apt_preference
+apt_preference '${1:name}' do
+	glob						
+	package_name		
+	pin							
+	pin_priority		
+	action :${2:add} 
+end

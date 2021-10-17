@@ -1,0 +1,7 @@
+# name: azurerm_network_security_group (InSpec)
+# key: azurerm_network_security_group
+# --
+# https://docs.chef.io/inspec/resources/azurerm_network_security_group
+	describe azurerm_network_security_group(resource_group: 'example', name: 'GroupName') do
+				...
+			end

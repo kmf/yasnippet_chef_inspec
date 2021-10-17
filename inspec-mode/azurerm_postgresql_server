@@ -1,0 +1,7 @@
+# name: azurerm_postgresql_server (InSpec)
+# key: azurerm_postgresql_server
+# --
+# https://docs.chef.io/inspec/resources/azurerm_postgresql_server
+	describe azurerm_postgresql_server(resource_group: 'inspec-resource-group-9', server_name: 'example_server') do
+				it { should exist }
+			end

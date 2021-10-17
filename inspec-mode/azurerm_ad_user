@@ -1,0 +1,7 @@
+# name: azurerm_ad_user (InSpec)
+# key: azurerm_ad_user
+# --
+# https://docs.chef.io/inspec/resources/azurerm_ad_user
+	describe azurerm_ad_user(user_id: 'someUserId') do
+				it { should exist }
+			end

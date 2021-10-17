@@ -1,0 +1,12 @@
+# name: iis_app (InSpec)
+# key: iis_app
+# --
+# https://docs.chef.io/inspec/resources/iis_app
+	describe iis_app('application_path', 'site_name') do
+				it { should exist }
+				it { should have_application_pool('application_pool') }
+				it { should have_protocol('protocol') }
+				it { should have_site_name('site') }
+				it { should have_physical_path('physical_path') }
+				it { should have_path('application_path') }
+			end

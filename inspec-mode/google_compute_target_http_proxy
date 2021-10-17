@@ -1,0 +1,9 @@
+# name: google_compute_target_http_proxy (InSpec)
+# key: google_compute_target_http_proxy
+# --
+# https://docs.chef.io/inspec/resources/google_compute_target_http_proxy
+	describe google_compute_target_http_proxy(project: 'chef-gcp-inspec', name: 'inspec-gcp-http-proxy') do
+		it { should exist }
+		its('description') { should eq 'A HTTP proxy' }
+		its('url_map') { should  match /\/inspec-gcp-url-map$/ }
+	end

@@ -1,0 +1,7 @@
+# name: google_organizations (InSpec)
+# key: google_organizations
+# --
+# https://docs.chef.io/inspec/resources/google_organizations
+	describe google_organizations do
+		its('names') { should include "organizations/123456" }
+	end

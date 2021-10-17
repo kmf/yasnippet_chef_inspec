@@ -1,0 +1,12 @@
+# name: homebrew_cask (Chef)
+# key: homebrew_cask
+# --
+# https://docs.chef.io/resources/homebrew_cask
+homebrew_cask '${1:name}' do
+	cask_name		 
+	homebrew_path "${2:/usr/local/bin/brew}" 
+	install_cask ${3:true}		
+	options			 
+	owner				 
+	action :${4:install}		
+end

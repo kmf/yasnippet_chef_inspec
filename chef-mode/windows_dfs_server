@@ -1,0 +1,12 @@
+# name: windows_dfs_server (Chef)
+# key: windows_dfs_server
+# --
+# https://docs.chef.io/resources/windows_dfs_server
+windows_dfs_server '${1:name}' do
+	enable_site_costed_referrals ${2:false}			
+	ldap_timeout_secs									
+	prefer_login_dc	${3:false}					
+	sync_interval_secs								
+	use_fqdn ${4:false}													
+	action :${5:configure}											
+end

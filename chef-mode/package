@@ -1,0 +1,22 @@
+# name: package (Chef)
+# key: package
+# --
+# https://docs.chef.io/resources/package
+package '${1:name}' do
+	allow_downgrade						
+	arch								 
+	default_release						
+	flush_cache								
+	gem_binary					 
+	homebrew_user				 
+	notifies						 
+	options							 
+	package_name				 
+	response_file				 
+	response_file_variables		
+	source							 
+	subscribes					 
+	timeout							 
+	version							 
+	action :${2:install}				
+end

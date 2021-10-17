@@ -1,0 +1,7 @@
+# name: rabbitmq_config (InSpec)
+# key: rabbitmq_config
+# --
+# https://docs.chef.io/inspec/resources/rabbitmq_config
+	describe rabbitmq_config.params('rabbit', 'ssl_listeners') do
+				it { should cmp 5671 }
+			end

@@ -1,0 +1,7 @@
+# name: processes (InSpec)
+# key: processes
+# --
+# https://docs.chef.io/inspec/resources/processes
+	describe processes('process_name') do
+				its('property_name') { should eq ['property_value'] }
+			end

@@ -1,0 +1,7 @@
+# name: aws_ecs_clusters (InSpec)
+# key: aws_ecs_clusters
+# --
+# https://docs.chef.io/inspec/resources/aws_ecs_clusters
+	describe aws_ecs_clusters do
+				its('cluster_names') { should include 'cluster-root' }
+			end

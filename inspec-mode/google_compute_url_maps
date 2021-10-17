@@ -1,0 +1,7 @@
+# name: google_compute_url_maps (InSpec)
+# key: google_compute_url_maps
+# --
+# https://docs.chef.io/inspec/resources/google_compute_url_maps
+	describe google_compute_url_maps(project: 'chef-gcp-inspec') do
+		its('names') { should include 'inspec-gcp-url-map' }
+	end

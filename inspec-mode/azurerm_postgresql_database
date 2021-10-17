@@ -1,0 +1,7 @@
+# name: azurerm_postgresql_database (InSpec)
+# key: azurerm_postgresql_database
+# --
+# https://docs.chef.io/inspec/resources/azurerm_postgresql_database
+	describe azurerm_postgresql_database(resource_group: 'inspec-rg', server_name: 'customer_server', database_name: 'order-db') do
+				it { should exist }
+			end

@@ -1,0 +1,7 @@
+# name: aws_iam_policies (InSpec)
+# key: aws_iam_policies
+# --
+# https://docs.chef.io/inspec/resources/aws_iam_policies
+	describe aws_iam_policies do
+				its('policy_names') { should include('test-policy-1') }
+			end

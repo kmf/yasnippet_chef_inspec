@@ -1,0 +1,9 @@
+# name: locale (Chef)
+# key: locale
+# --
+# https://docs.chef.io/resources/locale
+locale '${1:name}' do
+	lang			
+	lc_env		
+	action :${2:update}		
+end

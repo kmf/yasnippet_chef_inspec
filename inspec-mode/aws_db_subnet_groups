@@ -1,0 +1,7 @@
+# name: aws_db_subnet_groups (InSpec)
+# key: aws_db_subnet_groups
+# --
+# https://docs.chef.io/inspec/resources/aws_db_subnet_groups
+	describe aws_db_subnet_groups do
+				its('db_subnet_group_names.count') { should cmp 3 }
+			end

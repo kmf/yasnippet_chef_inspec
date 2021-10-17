@@ -1,0 +1,7 @@
+# name: sys_info (InSpec)
+# key: sys_info
+# --
+# https://docs.chef.io/inspec/resources/sys_info
+	describe sys_info do
+				its('hostname') { should eq 'value' }
+			end

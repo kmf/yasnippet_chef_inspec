@@ -1,0 +1,7 @@
+# name: etc_group (InSpec)
+# key: etc_group
+# --
+# https://docs.chef.io/inspec/resources/etc_group
+	describe etc_group('path') do
+				its('property') { should eq 'some_value' }
+			end

@@ -1,0 +1,13 @@
+# name: windows_dfs_namespace (Chef)
+# key: windows_dfs_namespace
+# --
+# https://docs.chef.io/resources/windows_dfs_namespace
+windows_dfs_namespace '${1:name}' do
+	change_users			
+	description				
+	full_users				
+	namespace_name		
+	read_users				
+	root "${2:C:\\DFSRoots}"								
+	action :${3:create}				
+end

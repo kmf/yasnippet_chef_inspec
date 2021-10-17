@@ -1,0 +1,7 @@
+# name: google_sourcerepo_repository (InSpec)
+# key: google_sourcerepo_repository
+# --
+# https://docs.chef.io/inspec/resources/google_sourcerepo_repository
+	describe google_sourcerepo_repository(project: 'chef-gcp-inspec', name: 'inspec-gcp-repository') do
+		it { should exist }
+	end

@@ -1,0 +1,13 @@
+# name: windows_feature (Chef)
+# key: windows_feature
+# --
+# https://docs.chef.io/resources/windows_feature
+windows_feature '${1:name}' do
+	all	${2:false}							
+	feature_name					
+	install_method				
+	management_tools ${3:false}			
+	source							
+	timeout							
+	action :${4:install}		
+end

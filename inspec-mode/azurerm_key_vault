@@ -1,0 +1,8 @@
+# name: azurerm_key_vault (InSpec)
+# key: azurerm_key_vault
+# --
+# https://docs.chef.io/inspec/resources/azurerm_key_vault
+	describe azurerm_key_vault(resource_group: 'inspec-resource-group', vault_name: 'vault-101') do
+				it						{ should exist }
+				its('name')		{ should eq('vault-101') }
+			end

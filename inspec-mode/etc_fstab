@@ -1,0 +1,11 @@
+# name: etc_fstab (InSpec)
+# key: etc_fstab
+# --
+# https://docs.chef.io/inspec/resources/etc_fstab
+	describe etc_fstab.where { device_name == 'value' } do
+				its('mount_point') { should cmp 'hostname' }
+				its('file_system_type') { should cmp 'list' }
+				its('mount_options') { should cmp 'list' }
+				its('dump_options') { should cmp 'list' }
+				its('file_system_options') { should cmp 'list' }
+			end

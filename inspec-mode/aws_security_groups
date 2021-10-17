@@ -1,0 +1,7 @@
+# name: aws_security_groups (InSpec)
+# key: aws_security_groups
+# --
+# https://docs.chef.io/inspec/resources/aws_security_groups
+	describe aws_security_groups do
+				its('entries.count') { should be > 1 }
+			end

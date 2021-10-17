@@ -1,0 +1,25 @@
+# name: template (Chef)
+# key: template
+# --
+# https://docs.chef.io/resources/template
+template '${1:name}' do
+	atomic_update							
+	backup										
+	cookbook						 
+	force_unlink							
+	group								 
+	helper(:method)						
+	helpers(module)						
+	inherits									
+	local											
+	manage_symlink_source			
+	mode								 
+	owner								 
+	path								 
+	rights										
+	sensitive									
+	source							 
+	variables									
+	verify							 
+	action :${2:create}					
+end

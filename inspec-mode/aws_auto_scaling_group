@@ -1,0 +1,9 @@
+# name: aws_auto_scaling_group (InSpec)
+# key: aws_auto_scaling_group
+# --
+# https://docs.chef.io/inspec/resources/aws_auto_scaling_group
+	describe aws_auto_scaling_group('MyAutoScalingGroup') do
+				it							{ should exist }
+				its('min_size') { should be 1}
+				its('max_size') { should be 4}
+			end

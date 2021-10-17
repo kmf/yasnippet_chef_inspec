@@ -1,0 +1,11 @@
+# name: google_logging_folder_log_sinks (InSpec)
+# key: google_logging_folder_log_sinks
+# --
+# https://docs.chef.io/inspec/resources/google_logging_folder_log_sinks
+	describe.one do
+		google_resourcemanager_folders(parent: 'organizations/12345').names.each do |folder_name|
+			# name on a folder is in the form 
+			describe google_logging_folder_log_sinks(folder: folder_name.split('/')[1]) do
+				its('names') { should include 'inspec-gcp-folder-sink' }
+				its('filters') { should include 'resource.type = gce_instance AND severity >= ERROR' }
+			end

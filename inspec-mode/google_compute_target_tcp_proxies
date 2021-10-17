@@ -1,0 +1,8 @@
+# name: google_compute_target_tcp_proxies (InSpec)
+# key: google_compute_target_tcp_proxies
+# --
+# https://docs.chef.io/inspec/resources/google_compute_target_tcp_proxies
+	describe google_compute_target_tcp_proxies(project: 'chef-gcp-inspec') do
+		its('names') { should include 'inspec-gcp-target-tcp-proxy' }
+		its('proxy_headers') { should include 'NONE' }
+	end

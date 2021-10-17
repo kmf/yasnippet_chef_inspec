@@ -1,0 +1,7 @@
+# name: aws_sts_caller_identity (InSpec)
+# key: aws_sts_caller_identity
+# --
+# https://docs.chef.io/inspec/resources/aws_sts_caller_identity
+	describe aws_sts_caller_identity do
+				it { should exist }
+			end

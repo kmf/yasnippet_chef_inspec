@@ -1,0 +1,7 @@
+# name: azurerm_management_group (InSpec)
+# key: azurerm_management_group
+# --
+# https://docs.chef.io/inspec/resources/azurerm_management_group
+	describe azurerm_management_group(group_id: 'MyGroupId') do
+				...
+			end

@@ -1,0 +1,7 @@
+# name: aws_sns_topics (InSpec)
+# key: aws_sns_topics
+# --
+# https://docs.chef.io/inspec/resources/aws_sns_topics
+	describe aws_sns_topics do
+				its('topic_arns') { should include 'arn:aws:sns:us-east-1:333344445555:MyTopic' }
+			end

@@ -1,0 +1,17 @@
+# name: dsc_script (Chef)
+# key: dsc_script
+# --
+# https://docs.chef.io/resources/dsc_script
+dsc_script '${1:name}' do
+	code								 
+	command "${2:ls -la}"							 
+	configuration_data	 
+	configuration_data_script  
+	configuration_name	 
+	cwd									 
+	environment					 
+	flags								 
+	imports							 
+	timeout							 
+	action :${3:run}						
+end

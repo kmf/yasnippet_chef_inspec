@@ -1,0 +1,9 @@
+# name: habitat_package (InSpec)
+# key: habitat_package
+# --
+# https://docs.chef.io/inspec/resources/habitat_package
+	describe habitat_package(origin: 'core', name: 'httpd') do
+		it						 { should exist }
+		its('version') { should eq '2.4.35'}
+		its('release') { should eq '20190307151146'}
+	end

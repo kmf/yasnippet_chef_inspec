@@ -1,0 +1,19 @@
+# name: windows_share (Chef)
+# key: windows_share
+# --
+# https://docs.chef.io/resources/windows_share
+windows_share '${1:name}' do
+	ca_timeout						
+	change_users					
+	concurrent_user_limit 			
+	continuously_available ${2:false}
+	description								
+	encrypt_data							
+	full_users								
+	path											
+	read_users								
+	scope_name "${3:*}"									
+	share_name									
+	temporary									
+	action :${4:create}				
+end

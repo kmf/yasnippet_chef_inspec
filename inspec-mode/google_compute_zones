@@ -1,0 +1,8 @@
+# name: google_compute_zones (InSpec)
+# key: google_compute_zones
+# --
+# https://docs.chef.io/inspec/resources/google_compute_zones
+	describe google_compute_zone(project: 'chef-gcp-inspec', name: zone_name) do
+			it { should exist }
+			it { should be_up }
+		end

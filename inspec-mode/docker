@@ -1,0 +1,7 @@
+# name: docker (InSpec)
+# key: docker
+# --
+# https://docs.chef.io/inspec/resources/docker
+	describe docker.containers do
+				its('images') { should_not include 'u12:latest' }
+			end

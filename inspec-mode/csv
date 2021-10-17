@@ -1,0 +1,7 @@
+# name: csv (InSpec)
+# key: csv
+# --
+# https://docs.chef.io/inspec/resources/csv
+	describe csv('file') do
+				its('name') { should cmp 'foo' }
+			end

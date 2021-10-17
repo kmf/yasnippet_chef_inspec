@@ -1,0 +1,7 @@
+# name: azurerm_subscription (InSpec)
+# key: azurerm_subscription
+# --
+# https://docs.chef.io/inspec/resources/azurerm_subscription
+	describe azurerm_subscription do
+				...
+			end

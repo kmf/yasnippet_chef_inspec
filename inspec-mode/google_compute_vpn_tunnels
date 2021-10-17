@@ -1,0 +1,8 @@
+# name: google_compute_vpn_tunnels (InSpec)
+# key: google_compute_vpn_tunnels
+# --
+# https://docs.chef.io/inspec/resources/google_compute_vpn_tunnels
+	describe google_compute_vpn_tunnels(project: 'chef-gcp-inspec', region: 'europe-west2') do
+		its('vpn_tunnel_names') { should include 'inspec-vpn-tunnel' }
+		its('peer_ips') { should include '15.0.0.120' }
+	end

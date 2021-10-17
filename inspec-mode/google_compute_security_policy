@@ -1,0 +1,10 @@
+# name: google_compute_security_policy (InSpec)
+# key: google_compute_security_policy
+# --
+# https://docs.chef.io/inspec/resources/google_compute_security_policy
+	describe google_compute_security_policy(project: 'chef-gcp-inspec', name: 'sec-policy') do
+		it { should exist }
+		its('rules.size') { should cmp 2 }
+		its('rules.first.priority') { should cmp '1000' }
+		its('rules.first.match.config.src_ip_ranges.first') { should cmp '9.9.9.0/24' }
+	end

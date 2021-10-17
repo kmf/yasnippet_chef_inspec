@@ -1,0 +1,9 @@
+# name: sysv_service (InSpec)
+# key: sysv_service
+# --
+# https://docs.chef.io/inspec/resources/sysv_service
+	describe sysv_service('service_name') do
+				it { should be_installed }
+				it { should be_enabled }
+				it { should be_running }
+			end

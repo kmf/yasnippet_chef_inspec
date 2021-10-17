@@ -1,0 +1,10 @@
+# name: aws_hosted_zone (InSpec)
+# key: aws_hosted_zone
+# --
+# https://docs.chef.io/inspec/resources/aws_hosted_zone
+	describe aws_hosted_zone('zone-name') do
+		it { should exist }
+		its ('name_servers.count') { should eq 4 }
+		its ('private_zone') { should be false }
+		its ('record_names') { should include 'sid-james.carry-on.films.com' }
+	end

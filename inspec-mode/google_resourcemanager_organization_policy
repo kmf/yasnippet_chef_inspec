@@ -1,0 +1,9 @@
+# name: google_resourcemanager_organization_policy (InSpec)
+# key: google_resourcemanager_organization_policy
+# --
+# https://docs.chef.io/inspec/resources/google_resourcemanager_organization_policy
+	describe google_resourcemanager_organization_policy(organization_name: "organizations/123456789", constraint: "constraints/compute.disableSerialPortAccess") do
+		it { should exist }
+		its('constraint') { should eq 'constraints/compute.disableSerialPortAccess' }
+		its('boolean_policy.enforced') { should be true }
+	end

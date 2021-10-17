@@ -1,0 +1,8 @@
+# name: google_logging_project_sink (InSpec)
+# key: google_logging_project_sink
+# --
+# https://docs.chef.io/inspec/resources/google_logging_project_sink
+	describe google_logging_project_sink(project: 'chef-gcp-inspec', name: 'inspec-gcp-org-sink') do
+		it { should exist }
+		its('filter') { should cmp 'resource.type = gce_instance AND severity = DEBUG' }
+	end

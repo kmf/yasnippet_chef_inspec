@@ -1,0 +1,7 @@
+# name: azurerm_webapps (InSpec)
+# key: azurerm_webapps
+# --
+# https://docs.chef.io/inspec/resources/azurerm_webapps
+	describe azurerm_webapps(resource_group: 'ExampleGroup') do
+				...
+			end

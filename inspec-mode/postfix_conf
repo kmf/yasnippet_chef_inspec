@@ -1,0 +1,7 @@
+# name: postfix_conf (InSpec)
+# key: postfix_conf
+# --
+# https://docs.chef.io/inspec/resources/postfix_conf
+	describe postfix_conf do
+				its('setting_name') { should cmp 'value' }
+			end

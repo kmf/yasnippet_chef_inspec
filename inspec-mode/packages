@@ -1,0 +1,7 @@
+# name: packages (InSpec)
+# key: packages
+# --
+# https://docs.chef.io/inspec/resources/packages
+	describe packages(/name/) do
+				its('statuses') { should cmp 'installed' }
+			end

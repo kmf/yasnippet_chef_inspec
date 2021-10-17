@@ -1,0 +1,8 @@
+# name: google_storage_bucket_iam_binding (InSpec)
+# key: google_storage_bucket_iam_binding
+# --
+# https://docs.chef.io/inspec/resources/google_storage_bucket_iam_binding
+	describe google_storage_bucket_iam_binding(bucket: "bucket", role: "roles/editor") do
+		it { should exist }
+		its('members') { should include 'user:testuser@example.com' }
+	end

@@ -1,0 +1,15 @@
+# name: windows_printer (Chef)
+# key: windows_printer
+# --
+# https://docs.chef.io/resources/windows_printer
+windows_printer '${1:name}' do
+	comment					
+	default		${2:false}	 
+	device_id					
+	driver_name			
+	ipv4_address		
+	location				
+	share_name			
+	shared	${3:false}		
+	action :${4:create}		
+end

@@ -1,0 +1,7 @@
+# name: security_policy (InSpec)
+# key: security_policy
+# --
+# https://docs.chef.io/inspec/resources/security_policy
+	describe security_policy do
+				its('policy_name') { should eq 'value' }
+			end

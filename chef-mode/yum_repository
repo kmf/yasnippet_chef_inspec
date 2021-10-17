@@ -1,0 +1,49 @@
+# name: yum_repository (Chef)
+# key: yum_repository
+# --
+# https://docs.chef.io/resources/yum_repository
+yum_repository '${1:name}' do
+	baseurl							 
+	clean_metadata	${2:true}			
+	cost								 
+	description "${2:Yum Repository}"					 
+	enabled	${3:true}							
+	enablegroups				 
+	exclude							 
+	failovermethod			 
+	fastestmirror_enabled 
+	gpgcheck ${4:true}					
+	gpgkey							 
+	http_caching				 
+	include_config			 
+	includepkgs					 
+	keepalive						 
+	make_cache ${5:false}				
+	max_retries					 
+	metadata_expire			 
+	metalink						 
+	mirror_expire				 
+	mirrorlist					 
+	mirrorlist_expire		 
+	mode								 
+	options							 
+	password						 
+	priority						 
+	proxy								 
+	proxy_password			 
+	proxy_username			 
+	repo_gpgcheck				 
+	report_instanceid		 
+	reposdir "${6:/etc/yum.repos.d/}"						 
+	repositoryid				 
+	skip_if_unavailable	 
+	source							 
+	sslcacert						 
+	sslclientcert				 
+	sslclientkey				 
+	sslverify						 
+	throttle						 
+	timeout							 
+	username						 
+	action :${7:create}					
+end

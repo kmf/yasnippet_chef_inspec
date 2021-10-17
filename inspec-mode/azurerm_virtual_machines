@@ -1,0 +1,7 @@
+# name: azurerm_virtual_machines (InSpec)
+# key: azurerm_virtual_machines
+# --
+# https://docs.chef.io/inspec/resources/azurerm_virtual_machines
+	describe azurerm_virtual_machines(resource_group: 'MyResourceGroup') do
+				...
+			end

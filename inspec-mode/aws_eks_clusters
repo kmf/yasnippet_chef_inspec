@@ -1,0 +1,7 @@
+# name: aws_eks_clusters (InSpec)
+# key: aws_eks_clusters
+# --
+# https://docs.chef.io/inspec/resources/aws_eks_clusters
+	describe aws_eks_clusters do
+				its('names.count') { should cmp 10 }
+			end

@@ -1,0 +1,9 @@
+# name: google_container_regional_cluster (InSpec)
+# key: google_container_regional_cluster
+# --
+# https://docs.chef.io/inspec/resources/google_container_regional_cluster
+	describe google_container_regional_cluster(project: 'chef-gcp-inspec', location: 'europe-west2', name: 'inspec-gcp-regional-cluster') do
+		it { should exist }
+		its('initial_node_count') { should eq '1'}
+		its('location') { should eq 'europe-west2'}
+	end

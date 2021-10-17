@@ -1,0 +1,7 @@
+# name: google_iam_organization_custom_roles (InSpec)
+# key: google_iam_organization_custom_roles
+# --
+# https://docs.chef.io/inspec/resources/google_iam_organization_custom_roles
+	describe google_iam_organization_custom_roles(org_id: '190694428152') do
+		its('names') { should include "organizations/123456/roles/role-id" }
+	end

@@ -1,0 +1,7 @@
+# name: google_compute_networks (InSpec)
+# key: google_compute_networks
+# --
+# https://docs.chef.io/inspec/resources/google_compute_networks
+	describe google_compute_networks(project: 'chef-gcp-inspec') do
+		its('network_names') { should include 'inspec-network' }
+	end

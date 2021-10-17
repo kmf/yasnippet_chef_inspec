@@ -1,0 +1,12 @@
+# name: solaris_package (Chef)
+# key: solaris_package
+# --
+# https://docs.chef.io/resources/solaris_package
+solaris_package '${1:name}' do
+	options					
+	package_name		
+	source					
+	timeout					
+	version					
+	action :${2:install}			
+end

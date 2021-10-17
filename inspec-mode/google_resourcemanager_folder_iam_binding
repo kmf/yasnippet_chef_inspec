@@ -1,0 +1,8 @@
+# name: google_resourcemanager_folder_iam_binding (InSpec)
+# key: google_resourcemanager_folder_iam_binding
+# --
+# https://docs.chef.io/inspec/resources/google_resourcemanager_folder_iam_binding
+	describe google_resourcemanager_folder_iam_binding(name: "name", role: "roles/editor") do
+		it { should exist }
+		its('members') { should include 'user:testuser@example.com' }
+	end

@@ -1,0 +1,9 @@
+# name: google_project (InSpec)
+# key: google_project
+# --
+# https://docs.chef.io/inspec/resources/google_project
+	describe google_project(project: 'chef-gcp-inspec') do
+		it { should exist }
+		its('project_id') { should cmp 'chef-gcp-inspec' }
+		its('lifecycle_state') { should cmp 'ACTIVE' }
+	end

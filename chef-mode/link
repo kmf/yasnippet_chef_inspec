@@ -1,0 +1,13 @@
+# name: link (Chef)
+# key: link
+# --
+# https://docs.chef.io/resources/link
+link '${1:name}' do
+	group			 
+	link_type	 
+	mode			 
+	owner			 
+	target_file 
+	to				 
+	action :${2:create}		
+end

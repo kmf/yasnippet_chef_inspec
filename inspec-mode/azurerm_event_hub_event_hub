@@ -1,0 +1,7 @@
+# name: azurerm_event_hub_event_hub (InSpec)
+# key: azurerm_event_hub_event_hub
+# --
+# https://docs.chef.io/inspec/resources/azurerm_event_hub_event_hub
+	describe azurerm_event_hub_event_hub(resource_group: 'my-rg', namespace_name 'my-event-hub-ns', event_hub_name 'myeventhub') do
+				it { should exist }
+			end

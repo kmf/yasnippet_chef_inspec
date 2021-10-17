@@ -1,0 +1,14 @@
+# name: windows_certificate (Chef)
+# key: windows_certificate
+# --
+# https://docs.chef.io/resources/windows_certificate
+windows_certificate '${1:name}' do
+	cert_path			 
+	exportable ${2:false}			
+	pfx_password	 
+	private_key_acl 
+	source				 
+	store_name "${3:MY}"		 
+	user_store	${4:false}	 
+	action :${5:create}							
+end

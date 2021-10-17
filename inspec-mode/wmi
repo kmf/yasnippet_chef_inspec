@@ -1,0 +1,12 @@
+# name: wmi (InSpec)
+# key: wmi
+# --
+# https://docs.chef.io/inspec/resources/wmi
+	describe wmi({
+				class: 'class_name',
+				namespace: 'path\\to\\setting',
+				filter: 'filter',
+				query: 'query'
+			}) do
+				its('setting_name') { should eq '' }
+			end

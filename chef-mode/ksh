@@ -1,0 +1,18 @@
+# name: ksh (Chef)
+# key: ksh
+# --
+# https://docs.chef.io/resources/ksh
+ksh '${1:name}' do
+	code								 
+	creates							 
+	cwd									 
+	environment					 
+	flags								 
+	group								 
+	path								 
+	returns							 
+	timeout							 
+	user								 
+	umask								 
+	action :${2:run}						
+end

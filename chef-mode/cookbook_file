@@ -1,0 +1,20 @@
+# name: cookbook_file (Chef)
+# key: cookbook_file
+# --
+# https://docs.chef.io/resources/cookbook_file
+cookbook_file '${1:name}' do
+	atomic_update							
+	backup										
+	cookbook						 
+	force_unlink ${2:false}			
+	group								 
+	inherits									
+	manage_symlink_source	${3:false}		 
+	mode								 
+	owner								 
+	path								 
+	rights										
+	source							 
+	verify							 
+	action :${4:create}							  
+end

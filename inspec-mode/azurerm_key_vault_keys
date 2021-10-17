@@ -1,0 +1,7 @@
+# name: azurerm_key_vault_keys (InSpec)
+# key: azurerm_key_vault_keys
+# --
+# https://docs.chef.io/inspec/resources/azurerm_key_vault_keys
+	describe azurerm_key_vault_keys('my-vault') do
+				...
+			end

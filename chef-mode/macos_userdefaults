@@ -1,0 +1,14 @@
+# name: macos_userdefaults (Chef)
+# key: macos_userdefaults
+# --
+# https://docs.chef.io/resources/macos_userdefaults
+macos_userdefaults '${1:name}' do
+	domain			
+	host			
+	key				
+	sudo		${2:false}		
+	type			
+	user			
+	value				
+	action :${3:write}		
+end

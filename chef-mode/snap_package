@@ -1,0 +1,13 @@
+# name: snap_package (Chef)
+# key: snap_package
+# --
+# https://docs.chef.io/resources/snap_package
+snap_package '${1:name}' do
+	channel "${2:stable}"						
+	options					
+	package_name		
+	source					
+	timeout					
+	version					
+	action :${3:install}			
+end

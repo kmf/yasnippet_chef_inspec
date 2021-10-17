@@ -1,0 +1,26 @@
+# name: user_ulimit (Chef)
+# key: user_ulimit
+# --
+# https://docs.chef.io/resources/user_ulimit
+user_ulimit '${1:name}' do
+	core_hard_limit						
+	core_limit					 
+	core_soft_limit						
+	filehandle_hard_limit			
+	filehandle_limit					
+	filehandle_soft_limit			
+	filename						 
+	memory_limit				 
+	process_hard_limit				
+	process_limit				 
+	process_soft_limit				
+	rtprio_hard_limit					
+	rtprio_limit				 
+	rtprio_soft_limit					
+	stack_hard_limit					
+	stack_limit					 
+	stack_soft_limit					
+	username						 
+	virt_limit					 
+	action :${2:create}					
+end

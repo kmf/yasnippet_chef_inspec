@@ -1,0 +1,12 @@
+# name: smartos_package (Chef)
+# key: smartos_package
+# --
+# https://docs.chef.io/resources/smartos_package
+smartos_package '${1:name}' do
+	options					
+	package_name		
+	source					
+	timeout					
+	version					
+	action :${2:install}			 
+end

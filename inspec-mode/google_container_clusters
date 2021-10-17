@@ -1,0 +1,7 @@
+# name: google_container_clusters (InSpec)
+# key: google_container_clusters
+# --
+# https://docs.chef.io/inspec/resources/google_container_clusters
+	describe google_container_clusters(project: 'chef-gcp-inspec', location: 'europe-west2-a') do
+		its('cluster_names') { should include 'gcp-inspec-kube-cluster' }
+	end

@@ -1,0 +1,7 @@
+# name: aws_ecr_repositories (InSpec)
+# key: aws_ecr_repositories
+# --
+# https://docs.chef.io/inspec/resources/aws_ecr_repositories
+	describe aws_ecr_repositories do
+				it { should exist }
+			end

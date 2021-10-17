@@ -1,0 +1,7 @@
+# name: aws_elbs (InSpec)
+# key: aws_elbs
+# --
+# https://docs.chef.io/inspec/resources/aws_elbs
+	describe aws_elbs do
+				its('load_balancer_names') { should include 'elb-name' }
+			end

@@ -1,0 +1,9 @@
+# name: google_logging_project_exclusion (InSpec)
+# key: google_logging_project_exclusion
+# --
+# https://docs.chef.io/inspec/resources/google_logging_project_exclusion
+	describe google_logging_project_exclusion(project: 'chef-gcp-inspec', name: 'inspec-project-exclusion') do
+		it { should exist }
+		its('description'){ should cmp 'My project exclusion description' }
+		its('filter'){ should cmp 'resource.type = gce_instance AND severity <= DEBUG' }
+	end

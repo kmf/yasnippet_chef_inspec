@@ -1,0 +1,17 @@
+# name: windows_firewall_profile (Chef)
+# key: windows_firewall_profile
+# --
+# https://docs.chef.io/resources/windows_firewall_profile
+windows_firewall_profile '${1:name}' do
+	allow_inbound_rules						
+	allow_local_firewall_rules		
+	allow_local_ipsec_rules				
+	allow_unicast_response				
+	allow_user_apps								
+	allow_user_ports							
+	default_inbound_action				
+	default_outbound_action				
+	display_notification					
+	profile												
+	action :${2:enable}						
+end

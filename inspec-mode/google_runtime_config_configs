@@ -1,0 +1,7 @@
+# name: google_runtime_config_configs (InSpec)
+# key: google_runtime_config_configs
+# --
+# https://docs.chef.io/inspec/resources/google_runtime_config_configs
+	describe google_runtime_config_configs(project: 'chef-gcp-inspec') do
+		its('descriptions') { should include 'My runtime configurations' }
+	end

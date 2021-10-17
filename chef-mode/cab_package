@@ -1,0 +1,12 @@
+# name: cab_package (Chef)
+# key: cab_package
+# --
+# https://docs.chef.io/resources/cab_package
+cab_package '${1:name}' do
+	options					
+	package_name		
+	source					
+	timeout					
+	version					
+	action :${2:install}
+end

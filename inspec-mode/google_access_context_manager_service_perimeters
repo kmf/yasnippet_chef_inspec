@@ -1,0 +1,10 @@
+# name: google_access_context_manager_service_perimeters (InSpec)
+# key: google_access_context_manager_service_perimeters
+# --
+# https://docs.chef.io/inspec/resources/google_access_context_manager_service_perimeters
+	describe.one do
+		google_access_context_manager_access_policies(org_id: '190694428152').names.each do |policy_name|
+			describe google_access_context_manager_service_perimeters(policy_name: policy_name) do
+				its('names') { should include 'restrict_all' }
+				its('titles') { should include 'restrict_all' }
+			end

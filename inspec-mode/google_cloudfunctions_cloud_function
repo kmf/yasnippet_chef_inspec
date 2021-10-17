@@ -1,0 +1,12 @@
+# name: google_cloudfunctions_cloud_function (InSpec)
+# key: google_cloudfunctions_cloud_function
+# --
+# https://docs.chef.io/inspec/resources/google_cloudfunctions_cloud_function
+	describe google_cloudfunctions_cloud_function(project: 'chef-gcp-inspec', location: 'europe-west1', name: 'inspec-gcp-function') do
+		it { should exist }
+		its('description') { should eq 'A description of the function' }
+		its('available_memory_mb') { should eq '128' }
+		its('https_trigger.url') { should match /\/inspec-gcp-function$/ }
+		its('entry_point') { should eq 'hello' }
+		its('environment_variables') { should include('MY_ENV_VAR' => 'val1') }
+	end

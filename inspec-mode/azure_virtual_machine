@@ -1,0 +1,7 @@
+# name: azure_virtual_machine (InSpec)
+# key: azure_virtual_machine
+# --
+# https://docs.chef.io/inspec/resources/azure_virtual_machine
+	describe azure_virtual_machine(group_name: 'MyResourceGroup', name: 'MyVM') do
+				its('property') { should eq 'value' }
+			end

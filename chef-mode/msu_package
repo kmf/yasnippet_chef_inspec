@@ -1,0 +1,12 @@
+# name: msu_package (Chef)
+# key: msu_package
+# --
+# https://docs.chef.io/resources/msu_package
+msu_package '${1:name}' do
+	checksum				
+	options					
+	package_name		
+	source					
+	timeout	${2:3600}				
+	action :${3:install}	
+end

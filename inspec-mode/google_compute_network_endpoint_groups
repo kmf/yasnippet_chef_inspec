@@ -1,0 +1,8 @@
+# name: google_compute_network_endpoint_groups (InSpec)
+# key: google_compute_network_endpoint_groups
+# --
+# https://docs.chef.io/inspec/resources/google_compute_network_endpoint_groups
+	describe google_compute_network_endpoint_groups(project: 'chef-gcp-inspec', zone: 'zone') do
+		its('default_ports') { should include '90' }
+		its('names') { should include 'inspec-gcp-endpoint-group' }
+	end

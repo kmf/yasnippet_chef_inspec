@@ -1,0 +1,7 @@
+# name: kernel_parameter (InSpec)
+# key: kernel_parameter
+# --
+# https://docs.chef.io/inspec/resources/kernel_parameter
+	describe kernel_parameter('path.to.parameter') do
+				its('value') { should eq 0 }
+			end

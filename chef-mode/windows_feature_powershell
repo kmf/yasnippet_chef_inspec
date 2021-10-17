@@ -1,0 +1,12 @@
+# name: windows_feature_powershell (Chef)
+# key: windows_feature_powershell
+# --
+# https://docs.chef.io/resources/windows_feature_powershell
+windows_feature_powershell '${1:name}' do
+	all	${2:false}					
+	feature_name					
+	management_tools ${3:false} 
+	source							
+	timeout								
+	action :${4:install}		
+end

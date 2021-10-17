@@ -1,0 +1,8 @@
+# name: google_container_regional_node_pool (InSpec)
+# key: google_container_regional_node_pool
+# --
+# https://docs.chef.io/inspec/resources/google_container_regional_node_pool
+	describe google_container_regional_node_pool(project: 'chef-gcp-inspec', location: 'europe-west2', cluster: 'inspec-gcp-regional-cluster', name: 'inspec-gcp-regional-node-pool') do
+		it { should exist }
+		its('initial_node_count') { should eq '1'}
+	end

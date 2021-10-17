@@ -1,0 +1,7 @@
+# name: google_kms_key_ring_iam_policy (InSpec)
+# key: google_kms_key_ring_iam_policy
+# --
+# https://docs.chef.io/inspec/resources/google_kms_key_ring_iam_policy
+	describe google_kms_key_ring_iam_policy(project: "project", location: "location", key_ring_name: "key_ring_name") do
+		it { should exist }
+	end

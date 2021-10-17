@@ -1,0 +1,7 @@
+# name: google_compute_routers (InSpec)
+# key: google_compute_routers
+# --
+# https://docs.chef.io/inspec/resources/google_compute_routers
+	describe google_compute_routers(project: 'chef-gcp-inspec', region: 'europe-west2') do
+		its('names') { should include 'inspec-gcp-router' }
+	end

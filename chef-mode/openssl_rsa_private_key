@@ -1,0 +1,15 @@
+# name: openssl_rsa_private_key (Chef)
+# key: openssl_rsa_private_key
+# --
+# https://docs.chef.io/resources/openssl_rsa_private_key
+openssl_rsa_private_key '${1:name}' do
+	force	${2:false}					
+	group					
+	key_cipher "${3:des3}"			
+	key_length			
+	key_pass			
+	mode "${4:0600}"					
+	owner					
+	path						
+	action :${5:create}				
+end

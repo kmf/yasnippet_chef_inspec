@@ -1,0 +1,7 @@
+# name: azure_virtual_machine_data_disk (InSpec)
+# key: azure_virtual_machine_data_disk
+# --
+# https://docs.chef.io/inspec/resources/azure_virtual_machine_data_disk
+	describe azure_virtual_machine_data_disk(group_name: 'InSpec-Azure', name: 'MyVM') do
+				its('property') { should eq 'value' }
+			end

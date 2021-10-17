@@ -1,0 +1,7 @@
+# name: ssh_config (InSpec)
+# key: ssh_config
+# --
+# https://docs.chef.io/inspec/resources/ssh_config
+	describe ssh_config('path') do
+				its('name') { should include('foo') }
+			end

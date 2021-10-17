@@ -1,0 +1,9 @@
+# name: host (InSpec)
+# key: host
+# --
+# https://docs.chef.io/inspec/resources/host
+	describe host('example.com', port: 80, protocol: 'tcp') do
+				it { should be_reachable }
+				it { should be_resolvable }
+				its('ipaddress') { should include '12.34.56.78' }
+			end

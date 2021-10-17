@@ -1,0 +1,8 @@
+# name: aws_ecr (InSpec)
+# key: aws_ecr
+# --
+# https://docs.chef.io/inspec/resources/aws_ecr
+	describe aws_ecr(repository_name: aws_ecr_name) do
+					it											 { should exist }
+					its ('repository_name')  { should eq aws_ecr_name }
+				end

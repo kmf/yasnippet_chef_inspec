@@ -1,0 +1,27 @@
+# name: ifconfig (Chef)
+# key: ifconfig
+# --
+# https://docs.chef.io/resources/ifconfig
+ifconfig '${1:name}' do
+	bcast						
+	bonding_opts		
+	bootproto				
+	bridge					
+	device					
+	ethtool_opts		
+	family "${2:inet}"						
+	gateway					
+	hwaddr					
+	inet_addr				
+	mask						
+	master					
+	metric					
+	mtu							
+	network					
+	onboot					
+	onparent				
+	slave						
+	target						
+	vlan						
+	action :${3:add}	
+end

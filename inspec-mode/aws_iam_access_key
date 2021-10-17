@@ -1,0 +1,7 @@
+# name: aws_iam_access_key (InSpec)
+# key: aws_iam_access_key
+# --
+# https://docs.chef.io/inspec/resources/aws_iam_access_key
+	describe aws_iam_access_key(access_key_id: 'AKIA1111111111111111') do
+				it { should exist }
+			end

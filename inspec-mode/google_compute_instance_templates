@@ -1,0 +1,7 @@
+# name: google_compute_instance_templates (InSpec)
+# key: google_compute_instance_templates
+# --
+# https://docs.chef.io/inspec/resources/google_compute_instance_templates
+	describe google_compute_instance_templates(project: 'chef-gcp-inspec') do
+		its('names') { should include 'inspec-gcp-instance-template' }
+	end

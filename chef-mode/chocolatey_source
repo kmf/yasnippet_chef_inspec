@@ -1,0 +1,13 @@
+# name: chocolatey_source (Chef)
+# key: chocolatey_source
+# --
+# https://docs.chef.io/resources/chocolatey_source
+chocolatey_source '${1:name}' do
+	admin_only		${2:false}					
+	allow_self_service	${3:false}		
+	bypass_proxy	${4:false}					
+	priority								
+	source								
+	source_name							
+	action :${5:add}				
+end

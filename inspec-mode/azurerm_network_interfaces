@@ -1,0 +1,7 @@
+# name: azurerm_network_interfaces (InSpec)
+# key: azurerm_network_interfaces
+# --
+# https://docs.chef.io/inspec/resources/azurerm_network_interfaces
+	describe azurerm_network_interfaces do
+				...
+			end

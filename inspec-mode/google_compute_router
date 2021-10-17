@@ -1,0 +1,14 @@
+# name: google_compute_router (InSpec)
+# key: google_compute_router
+# --
+# https://docs.chef.io/inspec/resources/google_compute_router
+	describe google_compute_router(project: 'chef-gcp-inspec', region: 'europe-west2', name: 'inspec-gcp-router') do
+		it { should exist }
+		its('bgp.asn') { should eq '64514' }
+		its('bgp.advertise_mode') { should eq 'CUSTOM' }
+		its('bgp.advertised_groups') { should include 'ALL_SUBNETS' }
+		its('bgp.advertised_ip_ranges.count') { should eq 2 }
+		its('bgp.advertised_ip_ranges.first.range') { should eq '1.2.3.4' }
+		its('bgp.advertised_ip_ranges.last.range') { should eq '1.2.3.4' }
+			its('network') { should match /\/gcp-inspec-network$/ }
+		end

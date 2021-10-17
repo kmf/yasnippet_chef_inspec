@@ -1,0 +1,24 @@
+# name: windows_firewall_rule (Chef)
+# key: windows_firewall_rule
+# --
+# https://docs.chef.io/resources/windows_firewall_rule
+windows_firewall_rule '${1:name}' do
+	description					
+	direction						
+	displayname		 
+	enabled	${2:false}		
+	firewall_action			
+	group					 
+	icmp_type						
+	interface_type			
+	local_address				
+	local_port					
+	profile							
+	program				 
+	protocol "${3:TCP}"			 
+	remote_address			
+	remote_port					
+	rule_name			 
+	service				 
+	action :${4:create}		
+end

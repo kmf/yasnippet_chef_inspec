@@ -1,0 +1,7 @@
+# name: azurerm_virtual_machine_disks (InSpec)
+# key: azurerm_virtual_machine_disks
+# --
+# https://docs.chef.io/inspec/resources/azurerm_virtual_machine_disks
+	describe azurerm_virtual_machine_disks do
+				...
+			end

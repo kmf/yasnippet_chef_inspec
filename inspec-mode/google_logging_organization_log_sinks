@@ -1,0 +1,7 @@
+# name: google_logging_organization_log_sinks (InSpec)
+# key: google_logging_organization_log_sinks
+# --
+# https://docs.chef.io/inspec/resources/google_logging_organization_log_sinks
+	describe google_logging_organization_log_sinks(organization: '190694428152') do
+		its('names') { should include 'inspec-gcp-org-sink' }
+	end

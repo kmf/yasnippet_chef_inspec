@@ -1,0 +1,7 @@
+# name: apache_conf (InSpec)
+# key: apache_conf
+# --
+# https://docs.chef.io/inspec/resources/apache_conf
+	describe apache_conf('path') do
+				its('setting_name') { should eq 'value' }
+			end

@@ -1,0 +1,8 @@
+# name: rhsm_errata (Chef)
+# key: rhsm_errata
+# --
+# https://docs.chef.io/resources/rhsm_errata
+rhsm_errata '${1:name}' do
+	errata_id 
+	action :${2:install}				
+end

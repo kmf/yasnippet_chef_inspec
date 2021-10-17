@@ -1,0 +1,7 @@
+# name: sshd_config (InSpec)
+# key: sshd_config
+# --
+# https://docs.chef.io/inspec/resources/sshd_config
+	describe sshd_config('path') do
+				its('name') { should include('foo') }
+			end

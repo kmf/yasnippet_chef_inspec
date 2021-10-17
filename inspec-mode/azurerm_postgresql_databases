@@ -1,0 +1,7 @@
+# name: azurerm_postgresql_databases (InSpec)
+# key: azurerm_postgresql_databases
+# --
+# https://docs.chef.io/inspec/resources/azurerm_postgresql_databases
+	describe azurerm_postgresql_databases(resource_group: ..., server_name: ...) do
+				...
+			end

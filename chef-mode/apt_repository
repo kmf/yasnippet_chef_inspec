@@ -1,0 +1,19 @@
+# name: apt_repository (Chef)
+# key: apt_repository
+# --
+# https://docs.chef.io/resources/apt_repository
+apt_repository '${1:name}' do
+	arch                             
+	cache_rebuild ${2:true}          
+	components                       
+	cookbook                         
+	deb_src		${3:false}             
+	distribution 
+	key                              
+	key_proxy                        
+	keyserver                        
+	repo_name                        
+	trusted		${4:false}             
+	uri                              
+	action :${5:add}                 
+end

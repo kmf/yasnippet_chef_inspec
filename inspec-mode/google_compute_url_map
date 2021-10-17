@@ -1,0 +1,16 @@
+# name: google_compute_url_map (InSpec)
+# key: google_compute_url_map
+# --
+# https://docs.chef.io/inspec/resources/google_compute_url_map
+	describe google_compute_url_map(project: 'chef-gcp-inspec', name: 'inspec-gcp-url-map') do
+		it { should exist }
+		its('description') { should eq 'URL map description' }
+		its('default_service') { should match /\/inspec-gcp-backend-service$/ }
+		its('host_rules.count') { should eq 1 }
+		its('host_rules.first.hosts') { should include 'site.com' }
+		its('path_matchers.count') { should eq 1 }
+		its('path_matchers.first.default_service') { should match /\/inspec-gcp-backend-service$/ }
+		its('tests.count') { should eq 1 }
+		its('tests.first.host') { should eq 'test.com' }
+		its('tests.first.path') { should eq '/home' }
+	end

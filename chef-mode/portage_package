@@ -1,0 +1,12 @@
+# name: portage_package (Chef)
+# key: portage_package
+# --
+# https://docs.chef.io/resources/portage_package
+portage_package '${1:name}' do
+	options					
+	package_name		
+	source					
+	timeout					
+	version					
+	action :${2:install}			
+end

@@ -1,0 +1,7 @@
+# name: aws_iam_role (InSpec)
+# key: aws_iam_role
+# --
+# https://docs.chef.io/inspec/resources/aws_iam_role
+	describe aws_iam_role(role_name: 'my-role') do
+					it { should exist }
+			end

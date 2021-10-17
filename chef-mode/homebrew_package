@@ -1,0 +1,13 @@
+# name: homebrew_package (Chef)
+# key: homebrew_package
+# --
+# https://docs.chef.io/resources/homebrew_package
+homebrew_package '${1:name}' do
+	homebrew_user			
+	options						
+	package_name			
+	source						
+	timeout						
+	version						
+	action :${2:install}						
+end

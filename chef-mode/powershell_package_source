@@ -1,0 +1,14 @@
+# name: powershell_package_source (Chef)
+# key: powershell_package_source
+# --
+# https://docs.chef.io/resources/powershell_package_source
+powershell_package_source '${1:name}' do
+	provider_name "${2:NuGet}"					 
+	publish_location					
+	script_publish_location		
+	script_source_location		
+	source_name						 
+	trusted										
+	url										 
+	action :${3:register}			
+end

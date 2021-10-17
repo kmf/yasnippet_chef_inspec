@@ -1,0 +1,7 @@
+# name: chocolatey_package (InSpec)
+# key: chocolatey_package
+# --
+# https://docs.chef.io/inspec/resources/chocolatey_package
+	describe chocolatey_package('name') do
+				it { should be_installed }
+			end

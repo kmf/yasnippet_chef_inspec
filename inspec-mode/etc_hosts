@@ -1,0 +1,8 @@
+# name: etc_hosts (InSpec)
+# key: etc_hosts
+# --
+# https://docs.chef.io/inspec/resources/etc_hosts
+	describe etc_hosts.where { ip_address == 'value' } do
+				its('primary_name') { should cmp 'hostname' }
+				its('all_host_names') { should cmp 'list' }
+			end

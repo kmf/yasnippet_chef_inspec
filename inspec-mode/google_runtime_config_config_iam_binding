@@ -1,0 +1,8 @@
+# name: google_runtime_config_config_iam_binding (InSpec)
+# key: google_runtime_config_config_iam_binding
+# --
+# https://docs.chef.io/inspec/resources/google_runtime_config_config_iam_binding
+	describe google_runtime_config_config_iam_binding(project: "project", name: "name", role: "roles/editor") do
+		it { should exist }
+		its('members') { should include 'user:testuser@example.com' }
+	end

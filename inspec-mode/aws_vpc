@@ -1,0 +1,7 @@
+# name: aws_vpc (InSpec)
+# key: aws_vpc
+# --
+# https://docs.chef.io/inspec/resources/aws_vpc
+	describe aws_vpc do
+				it { should exist }
+			end

@@ -1,0 +1,9 @@
+# name: kernel_module (InSpec)
+# key: kernel_module
+# --
+# https://docs.chef.io/inspec/resources/kernel_module
+	describe kernel_module('module_name') do
+				it { should be_loaded }
+				it { should_not be_disabled }
+				it { should_not be_blacklisted }
+			end

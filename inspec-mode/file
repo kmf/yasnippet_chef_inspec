@@ -1,0 +1,7 @@
+# name: file (InSpec)
+# key: file
+# --
+# https://docs.chef.io/inspec/resources/file
+	describe file('path') do
+				it { should PROPERTY 'value' }
+			end

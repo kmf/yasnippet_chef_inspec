@@ -1,0 +1,7 @@
+# name: azure_generic_resource (InSpec)
+# key: azure_generic_resource
+# --
+# https://docs.chef.io/inspec/resources/azure_generic_resource
+	describe azure_generic_resource(group_name: 'MyResourceGroup', name: 'MyResource') do
+				its('property') { should eq 'value' }
+			end

@@ -1,0 +1,7 @@
+# name: aws_organizations_member (InSpec)
+# key: aws_organizations_member
+# --
+# https://docs.chef.io/inspec/resources/aws_organizations_member
+	describe aws_organizations_member do
+					it { should exist }
+			end

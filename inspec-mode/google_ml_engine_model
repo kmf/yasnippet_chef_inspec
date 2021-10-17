@@ -1,0 +1,11 @@
+# name: google_ml_engine_model (InSpec)
+# key: google_ml_engine_model
+# --
+# https://docs.chef.io/inspec/resources/google_ml_engine_model
+	describe google_ml_engine_model(project: 'chef-gcp-inspec', name: 'ml_model') do
+		it { should exist }
+		its('description') { should cmp 'My awesome ML model' }
+		its('regions') { should include 'us-central1' }
+		its('online_prediction_logging') { should cmp 'true' }
+		its('online_prediction_console_logging') { should cmp 'true' }
+	end

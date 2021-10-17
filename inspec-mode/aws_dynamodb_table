@@ -1,0 +1,7 @@
+# name: aws_dynamodb_table (InSpec)
+# key: aws_dynamodb_table
+# --
+# https://docs.chef.io/inspec/resources/aws_dynamodb_table
+	describe aws_dynamodb_table(table_name: 'table-name') do
+				it { should exist }
+			end

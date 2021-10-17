@@ -1,0 +1,7 @@
+# name: google_container_node_pools (InSpec)
+# key: google_container_node_pools
+# --
+# https://docs.chef.io/inspec/resources/google_container_node_pools
+	describe google_container_node_pools(project: 'chef-gcp-inspec', location: 'europe-west2-a', cluster_name: 'gcp-inspec-kube-cluster') do
+		its('initial_node_counts') { should include '1'}
+	end
