@@ -1,4 +1,4 @@
-Some Chef and InSpec Snippets ported over from my Vim Snipmate Repo for Emacs.
+Some [Chef and InSpec Snippets](https://github.com/kmf/vim-chef-snippets) ported over from my Vim Snipmate Repo for Emacs.
 
 Clone this `repo`  and copy the directories in place 
 
@@ -11,3 +11,5 @@ Clone this `repo`  and copy the directories in place
 ```
 
 These where converted using the `snipmate_to_yas` gem.
+
+
